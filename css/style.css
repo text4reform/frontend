@@ -1,0 +1,59 @@
+/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);*/
+
+body{
+	background-color: black;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: lighter;
+}
+
+/* --------- general --------*/
+
+.black{
+	color: black;
+}
+
+.blue{
+	color: #38a0f4;
+}
+
+.white{
+	color: white;
+}
+
+.medium{
+	margin-bottom: 30px;
+}
+
+.alpha-text{
+	background: rgba(120, 120, 120, .55);
+}
+
+.font-extra-big{
+	font-size: 28px;
+}
+
+.font-big{
+	font-size: 26px;
+}
+
+.font-large{
+	font-size: 22px;
+}
+
+.font-medium{
+	font-size: 18px;
+}
+
+.font-normal{
+	font-size: 14px;
+}
+
+.font-small{
+	font-size: 12px;
+}
+
+/* header info */
+#header{
+	text-align: center;
+}
