@@ -4,25 +4,33 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
   <title>Text4Reform</title>
-  <link rel="stylesheet" href="css/bootstrap.min.css" >
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/justified-nav.css" rel="stylesheet">
+  
 </head>
 <body>
-
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-        <div id="header">
-          <h1>#Text<span class="blue">4</span>Reform</h1>
+      <div class="jumbotron">
+        <h1>#Text<span class="blue">4</span>Reform</h1>
+        <p class="lead">Does your representative support immigration reform? 
+          <br>Use our text messaging system to find out.</p>
+          <div class="row user_input">
+            <p><input type="text" class="form-control" id="input_phone" name="letter[phone]" placeholder="Cell Number" data-update=".userphone" /></p>
+            <p><input type="text" class="form-control" id="input_zip" name="letter[zip]" placeholder="Zipcode" data-update=".userzip" /></p>
+            <p><a class="btn btn-lg btn-primary" href="#" role="button">Find out »</a></p>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-  
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
-</body>
-</html>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <!-- <script src="js/bootstrap.min.js"></script> -->
+    </body>
+    </html>

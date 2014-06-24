@@ -1,12 +1,11 @@
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);*/
 
 body{
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: lighter;
 }
-
 /* --------- general --------*/
 
 .black{
@@ -53,7 +52,12 @@ body{
 	font-size: 12px;
 }
 
-/* header info */
-#header{
-	text-align: center;
+.user_input{
+	width: 250px;
+	position: absolute;
+	padding-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
 }
