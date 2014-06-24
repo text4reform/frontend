@@ -1,8 +1,8 @@
 /*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);*/
 
 body{
-	background-color: white;
-	color: black;
+	background-color: black;
+	color: white;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: lighter;
 }
@@ -60,4 +60,9 @@ body{
 	margin-right: auto;
 	left: 0;
 	right: 0;
+}
+
+.page-wrapper {
+	background-image: url('http://d3n8a8pro7vhmx.cloudfront.net/fwd/pages/243/attachments/original/1375229954/capitol-bw.jpg?1375229954');
+	background-size: cover;
 }
