@@ -7,6 +7,8 @@
 
   <title>Text4Reform</title>
   
+  <!-- Google Fonts API -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600">
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-responsive.css" rel="stylesheet">
@@ -24,9 +26,7 @@
           <form id="contact-form" method="post" action="#">
             <p><input type="text" class="form-control" id="input_phone" name="letter[phone]" placeholder="Cell Number" data-update=".userphone" /></p>
             <p><input type="text" class="form-control" id="input_zip" name="letter[zip]" placeholder="Zipcode" data-update=".userzip" /></p>
-            <!-- <a href="#" class="btn btn-primary" id="submit">Find out »</a> -->
             <button type="submit" id="submit" class="btn btn-primary">Find out »</button>
-            <!-- <button id="contact-btn" type="button" class="btn btn-primary">Find out »</button> -->
           </form> 
           
         </div>
@@ -75,7 +75,6 @@
         // Text me failed
       }
     });
-
     return false; 
   });
   </script>
