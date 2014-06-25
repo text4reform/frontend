@@ -7,30 +7,77 @@
   
   <title>Text4Reform</title>
   
-  <!-- Bootstrap core CSS -->
+  <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet">
   <link href="css/justified-nav.css" rel="stylesheet">
-  
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">  
 </head>
 <body class="page-wrapper">
   <div class="container">
     <div class="row">
       <div class="jumbotron">
         <h1>#Text<span class="blue">4</span>Reform</h1>
-        <p class="lead">Does your representative support immigration reform? 
-          <br>Use our text messaging system to find out.</p>
-          <div class="row user_input">
+        <p class="lead">Does your representative support immigration reform? <br>Use our text messaging system to find out.</p>
+        <div class="row user_input">
+          <form id="contact-form" method="post" action="#">
             <p><input type="text" class="form-control" id="input_phone" name="letter[phone]" placeholder="Cell Number" data-update=".userphone" /></p>
             <p><input type="text" class="form-control" id="input_zip" name="letter[zip]" placeholder="Zipcode" data-update=".userzip" /></p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Find out »</a></p>
-          </div>
+            <!-- <a href="#" class="btn btn-primary" id="submit">Find out »</a> -->
+            <button type="submit" id="submit" class="btn btn-primary">Find out »</button>
+            <!-- <button id="contact-btn" type="button" class="btn btn-primary">Find out »</button> -->
+          </form> 
+          
         </div>
       </div>
-      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
-      <!-- Include all compiled plugins (below), or include individual files as needed -->
-      <!-- <script src="js/bootstrap.min.js"></script> -->
-    </body>
-    </html>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <p class="text-white">Built using the <a href="http://fwd.us" target"_blank">FWD.us API</a></p>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+  // Kill form submit
+  $('form').submit(function(e) {
+    e.preventDefault();
+    // $('#submit').click();
+    return false;
+  });
+
+  // Text me
+  $('#submit').click(function() {
+
+    console.log("talk to twilio");
+
+    var server    = '162.209.126.106:1234';
+    var phone     = $('input#input_phone').val();
+    var zipcode   = $('input#input_zip').val();
+
+    $.ajax({
+      type: "post",
+      dataType: "json",
+      url: 'http://' + server + '/textme',
+      data: { zip: zipcode, number: phone },
+      crossDomain: true,
+      timeout: 2000,
+      success: function(data) {
+        // Text success
+        console.log("success: " +data);
+      },
+      error: function() {
+        // Text me failed
+      }
+    });
+
+    return false; 
+  });
+  </script>
+</body>
+</html>
+
+
