@@ -84,7 +84,7 @@
 
   // regular expression to validate phone and zip
   var phoneRegexp   = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
-  var zipCodeRegexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
+  var zipCodeRegexp = /^([0-9]{5})(?:-[0-9]{4})?$/;
 
   // kill form submit
   $('form').submit(function(e) {
@@ -104,23 +104,27 @@
     $('#warning-alert').addClass('hide');
 
     // validate phone
-    if(!phoneRegexp.exec(phone)){
+    var result = phoneRegexp.exec(phone);
+    if(!result){
       console.log("fail phone");
       $('input#input_phone').val('').focus();
       $('#warning-alert').removeClass('hide');
       return false;
     }else{
       console.log("success phone");
+      phone = result[1] + result[2] + result[3];
     }
 
     // validate zip
-    if(!zipCodeRegexp.exec(zipcode)){
+    result = zipCodeRegexp.exec(zipcode);
+    if(!result){
       console.log("fail zip");
       $('input#input_zip').val('').focus();
       $('#warning-alert').removeClass('hide');
       return false;
     }else{
       console.log("success zip");
+      zipcode = result[1];
     }
     
     // change button text to sending...
