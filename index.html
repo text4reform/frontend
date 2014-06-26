@@ -40,8 +40,6 @@
   ga('send', 'pageview');
 
   </script>
-  
-  
 </head>
 <body class="page-wrapper">
   <div id="success-alert" class="alert alert-success fade in hide" data-fade="3000">
@@ -63,9 +61,9 @@
         <p class="lead">Does your representative support immigration reform? <br>Use our text messaging system to find out.</p>
         <div class="row user_input">
           <form id="contact-form" method="post" action="#">
-            <p><input type="text" class="form-control" id="input_phone" name="letter[phone]" placeholder="Cell Number" data-update=".userphone" /></p>
+            <p><input type="tel" class="form-control" id="input_phone" name="letter[phone]" placeholder="Cell Number" data-update=".userphone" /></p>
             <p><input type="text" class="form-control" id="input_zip" name="letter[zip]" placeholder="Zipcode" data-update=".userzip" /></p>
-            <button type="submit" id="submit" class="btn btn-primary">Find out »</button>
+            <button type="submit" id="submit" class="btn btn-primary" data-loading-text="Sending...">Find out »</button>
           </form> 
         </div>
       </div>
@@ -87,20 +85,47 @@
   var phoneRegexp   = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
   var zipCodeRegexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
 
-  // Kill form submit
+  // kill form submit
   $('form').submit(function(e) {
     e.preventDefault();
     // $('#submit').click();
     return false;
   });
-  // Text me
+
+  // text me
   $('#submit').click(function() {
-
-    console.log("talk to twilio");
-
+    var btn       = $(this);
     var phone     = $('input#input_phone').val();
     var zipcode   = $('input#input_zip').val();
 
+    console.log("talk to twilio");
+
+    $('#warning-alert').addClass('hide');
+
+    // validate phone
+    if(!phoneRegexp.exec(phone)){
+      console.log("fail phone");
+      $('input#input_phone').val('').focus();
+      $('#warning-alert').removeClass('hide');
+      return false;
+    }else{
+      console.log("success phone");
+    }
+
+    // validate zip
+    if(!zipCodeRegexp.exec(zipcode)){
+      console.log("fail zip");
+      $('input#input_zip').val('').focus();
+      $('#warning-alert').removeClass('hide');
+      return false;
+    }else{
+      console.log("success zip");
+    }
+    
+    // change button text to sending...
+    btn.button('loading');
+
+    // submit phone and zip to twilio
     $.ajax({
       type: "post",
       dataType: "json",
@@ -109,17 +134,35 @@
       crossDomain: true,
       timeout: 2000,
       success: function(data) {
-        // Text success
         console.log("success: " +data);
+
+        setTimeout(function () {
+          btn.button('reset')
+          // clear phone and zip input
+          $('input#input_phone').val('').dequeue();
+          $('input#input_zip').val('').dequeue();
+          // show for a while and then hide alert
+          $('#success-alert').removeClass('hide').delay(5000).queue(function(){
+            $(this).addClass('hide').dequeue();
+          });
+        }, 1000)
       },
-      error: function() {
-        // Text me failed
-      }
-    });
+      error: function(data) {
+        console.log("Error: " +data);
+
+        setTimeout(function () {
+          btn.button('reset')
+          // clear phone and zip input
+          $('input#input_phone').val('').dequeue();
+          $('input#input_zip').val('').dequeue();
+          // show for a while and then hide alert
+          $('#error-alert').removeClass('hide').delay(5000).queue(function(){
+            $(this).addClass('hide').dequeue();
+          });
+        }, 1000)
+      }});
     return false; 
   });
   </script>
 </body>
 </html>
-
-

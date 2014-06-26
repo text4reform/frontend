@@ -62,7 +62,7 @@ body{
 .user_input{
 	width: 250px;
 	position: absolute;
-	padding-top: 20px;
+	/*padding-top: 20px;*/
 	margin-left: auto;
 	margin-right: auto;
 	left: 0;
@@ -86,7 +86,6 @@ a, a:hover {
 	padding: 7px;
 	width: 100%;
 }
-
 /* Sticky footer styles
 -------------------------------------------------- */
 
