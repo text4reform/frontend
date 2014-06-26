@@ -81,6 +81,12 @@
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
   <script>
+  var server        = '162.209.126.106:1234';
+
+  // regular expression to validate phone and zip
+  var phoneRegexp   = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
+  var zipCodeRegexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
+
   // Kill form submit
   $('form').submit(function(e) {
     e.preventDefault();
@@ -92,7 +98,6 @@
 
     console.log("talk to twilio");
 
-    var server    = '162.209.126.106:1234';
     var phone     = $('input#input_phone').val();
     var zipcode   = $('input#input_zip').val();
 
