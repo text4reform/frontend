@@ -11,6 +11,7 @@ body{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: lighter;
 	margin-bottom: 40px;
+	margin-top: 0px;
 }
 /* --------- general --------*/
 
@@ -76,6 +77,14 @@ body{
 a, a:hover {
 	color: white;
 	text-decoration: none !important;
+}
+
+/* Alerts */
+.alert {
+	position: absolute;
+	margin-bottom: 0px;
+	padding: 7px;
+	width: 100%;
 }
 
 /* Sticky footer styles
