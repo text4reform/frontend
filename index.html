@@ -3,24 +3,36 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  
   <title>Text4Reform</title>
+
+  <meta name="Title" content="Text4Reform">
+  <meta name="Description" content="Text4Reform: Immigration Advocacy via Texting">
+
+  <!-- OG -->
+  <meta property="og:url" content="http://text4reform.org/"/>
+  <meta property="og:site_name" content="Text4Reform" />
+  <meta property="og:title" content="Text4Reform: Immigration Advocacy via Texting" />
+  <meta property="og:description" content="Urge Congress to take action on immigration reform. We will deliver your message as posted letter on your behalf."/>
+  <meta property="og:image" content="http://d3n8a8pro7vhmx.cloudfront.net/fwd/pages/243/attachments/original/1375229954/capitol-bw.jpg?1375229954"/>
   
   <!-- Google Fonts API -->
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600">
-  <!-- Bootstrap CSS -->
+  
+  <!-- Bootstrap core CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/bootstrap-responsive.css" rel="stylesheet">
   <link href="css/justified-nav.css" rel="stylesheet">
+
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet">  
+  <link href="css/style.css" rel="stylesheet"> 
   
   <!-- Analytics Tracking  -->
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-52304104-1', 'auto');
@@ -42,17 +54,15 @@
             <p><input type="text" class="form-control" id="input_zip" name="letter[zip]" placeholder="Zipcode" data-update=".userzip" /></p>
             <button type="submit" id="submit" class="btn btn-primary">Find out »</button>
           </form> 
-          
         </div>
       </div>
     </div>
-    <div id="footer">
-      <div class="container">
-        <p class="text-white">Built using the <a href="http://fwd.us" target"_blank">FWD.us API</a></p>
-      </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <p class="text-white">Built using the <a href="http://fwd.us" target"_blank">FWD.us API</a></p>
     </div>
   </div>
-  
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -64,7 +74,6 @@
     // $('#submit').click();
     return false;
   });
-
   // Text me
   $('#submit').click(function() {
 
