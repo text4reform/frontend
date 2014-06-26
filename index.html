@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>Text4Reform</title>
+
+  <meta name="Title" content="Text4Reform">
+  <meta name="Description" content="Text4Reform: Immigration Advocacy via Texting">
+  <link rel="shortcut icon" type="image/x-icon" href="http://d3n8a8pro7vhmx.cloudfront.net/themes/5321de5cebad645a84000001/attachments/original/1365598174/favicon_(2).ico?1365598174">
+
+  <!-- OG -->
+  <meta property="og:url" content="http://text4reform.org/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Text4Reform" />
+  <meta property="og:title" content="Text4Reform: Immigration Advocacy via Texting" />
+  <meta property="og:description" content="Urge Congress to take action on immigration reform. We will deliver your message as posted letter on your behalf." />
+  <meta property="og:image" content="http://d3n8a8pro7vhmx.cloudfront.net/fwd/pages/243/attachments/original/1375229954/capitol-bw.jpg?1375229954" />
+  
+  <!-- Google Fonts API -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600">
+  
+  <!-- Bootstrap core CSS -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="css/justified-nav.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet"> 
+  
+  <!-- Analytics Tracking  -->
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52304104-1', 'auto');
+  ga('send', 'pageview');
+
+  </script>
+</head>
+<body class="page-wrapper">
+  <div id="success-alert" class="alert alert-success fade in hide" data-fade="3000">
+    <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+    <strong>Thanks!</strong> We will contact you shortly via text.
+  </div>
+  <div id="warning-alert" class="alert alert-warning fade in hide" data-fade="3000">
+    <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+    Whoops, invalid phone number or zipcode.
+  </div>
+  <div id="error-alert" class="alert alert-danger fade in hide" data-fade="3000">
+    <!-- <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button> -->
+    <strong>Sorry!</strong> We were unable to submit your information this time.
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron">
+        <h1>#Text<span class="blue">4</span>Reform</h1>
+        <p class="lead">Does your representative support immigration reform? <br>Use our text messaging system to find out.</p>
+        <div class="row user_input">
+          <form id="contact-form" method="post" action="#">
+            <p><input type="tel" class="form-control" id="input_phone" name="letter[phone]" placeholder="Cell Number" data-update=".userphone" /></p>
+            <p><input type="text" class="form-control" id="input_zip" name="letter[zip]" placeholder="Zipcode" data-update=".userzip" /></p>
+            <button type="submit" id="submit" class="btn btn-primary" data-loading-text="Sending...">Find out »</button>
+          </form> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer">
+    <div class="container">
+      <p class="text-white">Built using the <a href="http://app.fwd.us/legislators?partner=gh7" target"_blank">FWD.us Tools</a></p>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script>
+  var server        = '162.209.126.106:1234';
+
+  // regular expression to validate phone and zip
+  var phoneRegexp   = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
+  var zipCodeRegexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
+
+  // kill form submit
+  $('form').submit(function(e) {
+    e.preventDefault();
+    // $('#submit').click();
+    return false;
+  });
+
+  // text me
+  $('#submit').click(function() {
+    var btn       = $(this);
+    var phone     = $('input#input_phone').val();
+    var zipcode   = $('input#input_zip').val();
+
+    console.log("talk to twilio");
+
+    $('#warning-alert').addClass('hide');
+
+    // validate phone
+    if(!phoneRegexp.exec(phone)){
+      console.log("fail phone");
+      $('input#input_phone').val('').focus();
+      $('#warning-alert').removeClass('hide');
+      return false;
+    }else{
+      console.log("success phone");
+    }
+
+    // validate zip
+    if(!zipCodeRegexp.exec(zipcode)){
+      console.log("fail zip");
+      $('input#input_zip').val('').focus();
+      $('#warning-alert').removeClass('hide');
+      return false;
+    }else{
+      console.log("success zip");
+    }
+    
+    // change button text to sending...
+    btn.button('loading');
+
+    // submit phone and zip to twilio
+    $.ajax({
+      type: "post",
+      dataType: "json",
+      url: 'http://' + server + '/textme',
+      data: { zip: zipcode, number: phone },
+      crossDomain: true,
+      timeout: 2000,
+      success: function(data) {
+        console.log("success: " +data);
+
+        setTimeout(function () {
+          btn.button('reset')
+          // clear phone and zip input
+          $('input#input_phone').val('').dequeue();
+          $('input#input_zip').val('').dequeue();
+          // show for a while and then hide alert
+          $('#success-alert').removeClass('hide').delay(5000).queue(function(){
+            $(this).addClass('hide').dequeue();
+          });
+        }, 1000)
+      },
+      error: function(data) {
+        console.log("Error: " +data);
+
+        setTimeout(function () {
+          btn.button('reset')
+          // clear phone and zip input
+          $('input#input_phone').val('').dequeue();
+          $('input#input_zip').val('').dequeue();
+          // show for a while and then hide alert
+          $('#error-alert').removeClass('hide').delay(5000).queue(function(){
+            $(this).addClass('hide').dequeue();
+          });
+        }, 1000)
+      }});
+    return false; 
+  });
+  </script>
+</body>
+</html>
