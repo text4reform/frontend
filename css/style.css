@@ -162,7 +162,7 @@ p.desktop-message {
 	}
 
 	h1{
-		font-size: 60px;
+		font-size: 45px;
 	}
 
 	#footer > .container{
@@ -189,7 +189,7 @@ p.desktop-message {
 
 	p.mobile-message {
 		display: show !important;
-		font-size: 22px;
+		font-size: 18px;
 		padding-bottom: 13px;
 		padding-top: 30px;
 	}
