@@ -95,10 +95,10 @@ a, a:hover {
 	bottom: 0;
 	width: 100%;
 	/* Set the fixed height of the footer here */
-	height: 40px;
+	height: 20px;
 	/*background-color: #f5f5f5;*/
 	background: rgba(120, 120, 120, .55);
-	padding-top: 10px;
+	padding-top: 2px;
 }
 
 /* Custom page CSS
@@ -113,8 +113,10 @@ body > .container {
 }
 
 #footer > .container {
-	padding-right: 15px;
-	padding-left: 15px;
+	padding-right: 10px;
+	padding-left: 10px;
+	font-size: 11px;
+	text-align: center;
 }
 
 code {
@@ -140,12 +142,14 @@ code {
 	}
 
 	#footer > .container{
-		font-size: 11px;
+		font-size: 10px;
 	}
 
 	#footer {
 		/* Set the fixed height of the footer here */
-		height: 8px;
-		padding-top: 5px;
+		height: 19px;
+		padding-top: 2px;
+		/*padding-bottom: 2px;*/
+		margin-bottom: 0px;
 	}
 }
