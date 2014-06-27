@@ -75,9 +75,14 @@ body{
 	background-size: cover;
 }
 
-a, a:hover {
+a{
 	color: white;
 	text-decoration: none !important;
+}
+
+a:hover {
+	color: white;
+	text-decoration: underline !important;
 }
 
 /* Alerts */
