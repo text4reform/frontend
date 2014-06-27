@@ -12,6 +12,7 @@ body{
 	font-weight: lighter;
 	margin-bottom: 175px;
 	margin-top: 0px;
+	padding-top: 0px !important;
 }
 
 /* --------- general --------*/
@@ -92,6 +93,7 @@ a:hover {
 	padding: 7px;
 	width: 100%;
 }
+
 /* Sticky footer styles
 -------------------------------------------------- */
 
@@ -128,10 +130,27 @@ code {
 	font-size: 80%;
 }
 
+p.desktop-message {
+	display: show;
+	padding-bottom: 13px;
+	padding-top: 30px;
+	
+}
+
+@media (min-width: 767px) {
+	p.mobile-message {
+		display: none !important;
+	}
+}
 
 @media (max-width: 767px) {
 	body {
 		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.page-wrapper{
+		padding-right: 0px;
 	}
 
 	.form-control {
@@ -143,7 +162,7 @@ code {
 	}
 
 	h1{
-		font-size: 45px;
+		font-size: 60px;
 	}
 
 	#footer > .container{
@@ -156,5 +175,22 @@ code {
 		padding-top: 2px;
 		/*padding-bottom: 2px;*/
 		margin-bottom: 0px;
+	}
+
+	.jumbotron{
+		/*padding: 0px;*/
+		padding-left: 5px;
+		padding-top: 0px;
+	}
+
+	p.desktop-message {
+		display: none;
+	}
+
+	p.mobile-message {
+		display: show !important;
+		font-size: 22px;
+		padding-bottom: 13px;
+		padding-top: 30px;
 	}
 }
