@@ -149,8 +149,15 @@ p.desktop-message {
 		padding-right: 0px;
 	}
 
+	body > .container {
+		/*padding: 60px 15px 0;*/
+		padding-left: 0px;
+		/*padding-right: 0px;*/
+	}
+
 	.page-wrapper{
 		padding-right: 0px;
+		padding-left: 0px;
 	}
 
 	.form-control {
@@ -163,6 +170,7 @@ p.desktop-message {
 
 	h1{
 		font-size: 45px;
+		text-align: center;
 	}
 
 	#footer > .container{
@@ -179,7 +187,8 @@ p.desktop-message {
 
 	.jumbotron{
 		/*padding: 0px;*/
-		padding-left: 5px;
+		padding-left: 0px;
+		padding-right: 5px;
 		padding-top: 0px;
 	}
 
@@ -189,8 +198,9 @@ p.desktop-message {
 
 	p.mobile-message {
 		display: show !important;
-		font-size: 18px;
+		font-size: 17px;
 		padding-bottom: 13px;
 		padding-top: 30px;
+		text-align: center;
 	}
 }
