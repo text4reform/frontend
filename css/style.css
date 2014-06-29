@@ -94,6 +94,21 @@ a:hover {
 	width: 100%;
 }
 
+/* FB like */
+.fb-like{
+	text-align: right;
+
+}
+
+.fb-iframe{
+	border:none; 
+	overflow:hidden; 
+	height:37px;
+	width: 100px;
+	text-align: right;
+	padding-top: 17px;
+}
+
 /* Sticky footer styles
 -------------------------------------------------- */
 
@@ -114,7 +129,7 @@ a:hover {
 
 body > .container {
 	/*padding: 60px 15px 0;*/
-	padding-top: 50px;
+	padding-top: 0px;
 }
 .container .text-muted {
 	margin: 20px 0;
@@ -153,6 +168,7 @@ p.desktop-message {
 	body > .container {
 		/*padding: 60px 15px 0;*/
 		padding-left: 0px;
+		padding-top: 20px;
 		/*padding-right: 0px;*/
 	}
 
