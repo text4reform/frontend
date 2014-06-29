@@ -97,13 +97,12 @@ a:hover {
 /* FB like */
 .fb-like{
 	text-align: right;
-
 }
 
 .fb-iframe{
 	border:none; 
 	overflow:hidden; 
-	height:37px;
+	height: 37px;
 	width: 100px;
 	text-align: right;
 	padding-top: 17px;
