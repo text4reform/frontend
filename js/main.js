@@ -2,7 +2,7 @@ var server        = '162.209.126.106:1234';
 server = 'localhost:1234';
 
 // regular expression to validate phone and zip
-var phoneRegexp   = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/; 
+var phoneRegexp   = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 var zipCodeRegexp = /^([0-9]{5})(?:-[0-9]{4})?$/;
 
 // kill form submit
@@ -12,11 +12,17 @@ $('form').submit(function(e) {
   return false;
 });
 
+var $phone   = $('#input_phone');
+var $zipcode = $('#input_zip');
+var $warning = $('#warning-alert');
+var $success = $('#success-alert');
+var $error   = $('#error-alert');
+
 // text me
 $('#submit').click(function() {
   var btn       = $(this);
-  var phone     = $('input#input_phone').val();
-  var zipcode   = $('input#input_zip').val();
+  var phone     = $phone.val();
+  var zipcode   = $zipcode.val();
 
   console.log("talk to twilio");
 
@@ -24,8 +30,9 @@ $('#submit').click(function() {
   var result = phoneRegexp.exec(phone);
   if(!result){
     console.log("fail phone");
-    $('input#input_phone').val('').focus();
-    $('#warning-alert').removeClass('hide');
+    $phone.val('').focus();
+    $warning.removeClass('hide');
+    $success.addClass('hide');
     return false;
   }else{
     console.log("success phone");
@@ -36,8 +43,9 @@ $('#submit').click(function() {
   result = zipCodeRegexp.exec(zipcode);
   if(!result){
     console.log("fail zip");
-    $('input#input_zip').val('').focus();
-    $('#warning-alert').removeClass('hide');
+    $zipcode.val('').focus();
+    $warning.removeClass('hide');
+    $success.addClass('hide');
     return false;
   }else{
     console.log("success zip");
@@ -57,31 +65,29 @@ $('#submit').click(function() {
     timeout: 2000,
     success: function(data) {
       console.log("success: ", data);
-
-      setTimeout(function () {
-        btn.button('reset')
-        // clear phone and zip input
-        $('input#input_phone').val('').dequeue();
-        $('input#input_zip').val('').dequeue();
-        // show for a while and then hide alert
-        $('#success-alert').removeClass('hide').delay(5000).queue(function(){
-          $(this).addClass('hide').dequeue();
-        });
-      }, 1000)
+      btn.button('reset')
+      // clear phone and zip input
+      $phone.val('');
+      $zipcode.val('');
+      // show for a while and then hide alert
+      $warning.addClass('hide');
+      $error.addClass('hide');
+      $success.removeClass('hide').delay(5000).queue(function(){
+        $(this).addClass('hide').dequeue();
+      });
     },
     error: function(data) {
       console.log("Error: ", data);
-
-      setTimeout(function () {
-        btn.button('reset')
-        // clear phone and zip input
-        $('input#input_phone').val('').dequeue();
-        $('input#input_zip').val('').dequeue();
-        // show for a while and then hide alert
-        $('#error-alert').removeClass('hide').delay(5000).queue(function(){
-          $(this).addClass('hide').dequeue();
-        });
-      }, 1000)
+      btn.button('reset')
+      // clear phone and zip input
+      $phone.val('');
+      $zipcode.val('');
+      // show for a while and then hide alert
+      $warning.addClass('hide');
+      $success.addClass('hide');
+      $error.removeClass('hide').delay(5000).queue(function(){
+        $(this).addClass('hide').dequeue();
+      });
     }});
 return false; 
 });
