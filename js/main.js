@@ -71,7 +71,7 @@ $('#submit').click(function() {
       console.log("success: ", data);
       btn.button('reset');
       if (data.exists) {
-        warning('Already texted that number.');
+        warning('We already texted that number recently.');
       } else {
         // clear phone and zip input
         $phone.val('');
