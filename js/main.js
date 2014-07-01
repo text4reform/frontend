@@ -72,6 +72,8 @@ $('#submit').click(function() {
       btn.button('reset');
       if (data.exists) {
         warning('We already texted that number recently.');
+        $phone.val('');
+        $zipcode.val('');
       } else {
         // clear phone and zip input
         $phone.val('');
