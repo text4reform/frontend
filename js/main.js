@@ -18,6 +18,13 @@ var $warning = $('#warning-alert');
 var $success = $('#success-alert');
 var $error   = $('#error-alert');
 
+function warning(msg) {
+  $success.addClass('hide');
+  $error.addClass('hide');
+  $warning.text(msg);
+  $warning.removeClass('hide');
+}
+
 // text me
 $('#submit').click(function() {
   var btn       = $(this);
@@ -31,8 +38,7 @@ $('#submit').click(function() {
   if(!result){
     console.log("fail phone");
     $phone.val('').focus();
-    $warning.removeClass('hide');
-    $success.addClass('hide');
+    warning('Whoops, invalid phone number.');
     return false;
   }else{
     console.log("success phone");
@@ -44,8 +50,7 @@ $('#submit').click(function() {
   if(!result){
     console.log("fail zip");
     $zipcode.val('').focus();
-    $warning.removeClass('hide');
-    $success.addClass('hide');
+    warning('Whoops, invalid zip code.');
     return false;
   }else{
     console.log("success zip");
@@ -65,16 +70,20 @@ $('#submit').click(function() {
     timeout: 2000,
     success: function(data) {
       console.log("success: ", data);
-      btn.button('reset')
-      // clear phone and zip input
-      $phone.val('');
-      $zipcode.val('');
-      // show for a while and then hide alert
-      $warning.addClass('hide');
-      $error.addClass('hide');
-      $success.removeClass('hide').delay(5000).queue(function(){
-        $(this).addClass('hide').dequeue();
-      });
+      btn.button('reset');
+      if (data.exists) {
+        warning('Already texted that number.');
+      } else {
+        // clear phone and zip input
+        $phone.val('');
+        $zipcode.val('');
+        // show for a while and then hide alert
+        $warning.addClass('hide');
+        $error.addClass('hide');
+        $success.removeClass('hide').delay(5000).queue(function(){
+          $(this).addClass('hide').dequeue();
+        });
+      }
     },
     error: function(data) {
       console.log("Error: ", data);
