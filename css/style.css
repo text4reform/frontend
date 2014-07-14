@@ -206,7 +206,7 @@ p.desktop-message {
 
 	.jumbotron{
 		/*padding: 0px;*/
-		padding-left: 0px;
+		/*padding-left: 0px;*/
 		padding-right: 5px;
 		padding-top: 0px;
 		padding-bottom: 0px;
@@ -218,7 +218,7 @@ p.desktop-message {
 
 	p.mobile-message {
 		display: show !important;
-		font-size: 17px;
+		font-size: 16px;
 		padding-bottom: 13px;
 		padding-top: 30px;
 		text-align: center;
