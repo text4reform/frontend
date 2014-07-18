@@ -36,6 +36,7 @@ $('#submit').click(function() {
   var result = phoneRegexp.exec(phone);
   if(!result){
     console.log("fail phone");
+    $zipcode.val('').focus();
     $phone.val('').focus();
     warning('Whoops, invalid phone number.');
     return false;

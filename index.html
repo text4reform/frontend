@@ -60,6 +60,7 @@
     <div id="error-alert" class="alert alert-danger fade in hide" data-fade="3000">
       <strong>Sorry!</strong> We were unable to submit your information this time.
     </div>
+
     <div class="container">
       <div class="row">
         <div class="jumbotron">
@@ -69,8 +70,8 @@
           <!--  <p class="lead mobile-message">Text Congress for <a href="http://www.fwd.us/immigration_reform">Immigration Reform</a>! <br>Make your voice be heard today.</p> -->
           <div class="row user_input">
             <form id="contact-form" method="post" action="#">
-              <p><input type="tel" class="form-control" id="input_phone" name="letter[phone]" placeholder="Cell Number" data-update=".userphone" /></p>
-              <p><input type="text" class="form-control" id="input_zip" name="letter[zip]" placeholder="Zipcode" data-update=".userzip" /></p>
+              <p><input id="input_phone" type="tel" class="form-control" name="phone" placeholder="Cell Number" /></p>
+              <p><input id="input_zip" type="number" class="form-control" name="zipcode" placeholder="Zipcode" /></p>
               <button type="submit" id="submit" class="btn btn-primary desktop-btn" data-loading-text="Sending...">Submit »</button>
             </form> 
           </div>
