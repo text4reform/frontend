@@ -63,15 +63,22 @@ body{
 .jumbotron h1{
 	color: black;
 	font-size: 48px;
-	position: absolute;
+	/*position: absolute;*/
     left:0;
     top: 0;
 }
 
+.jumbotron .row{
+	text-align: center;
+}
+
 .jumbotron .signup{
+	margin-top: 40px;
 	background-color: white;
 	padding: 20px;
 	width: 280px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .jumbotron .signup p{
