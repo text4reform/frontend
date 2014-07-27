@@ -9,7 +9,7 @@ body{
 
 .nav a{
 	font-size: 12px;
-	
+
 	padding: 14px 10px;
 	text-transform: uppercase;
 	color: #38a0f4;
@@ -38,31 +38,48 @@ body{
 .jumbotron{
 	/*background-image: url('http://2.bp.blogspot.com/-5pdZ3yunyqs/TgjHlBava3I/AAAAAAAAALI/7ZU7sr4oaso/s1600/05-Capitol%2BBuilding.jpg');*/
 	/*background-image: url('http://2s2u.com/p2go.com/wp-content/uploads/2011/06/Eastern-side-of-the-US-Capitol-Building-and-The-Mall-with-The-George-Washington-Monument-in-the-distance-at-sunset-Washington-D.C..jpg');*/
-	/*background-image: url('https://bradtroyphotography.files.wordpress.com/2012/05/us_capitol_building_8.jpg');*/
+	background-image: url('https://bradtroyphotography.files.wordpress.com/2012/05/us_capitol_building_8.jpg');
 	/*background-image: url('http://www.hdwallpapers.in/walls/united_states_capitol-normal.jpg');*/
 	/*background-image: url('http://www.atpm.com/7.01/washington-dc/images/capitol-angle.jpg');*/
 	/*background-image: url('http://cecblog.typepad.com/.a/6a00d83452098b69e2019b00404a89970d-pi');*/
 	/*background-image: url('http://www.seriouswheels.com/pics-2006/2006-Cadillac-DTS-Presidential-Limousine-FA-Capitol-Building-1600x1200.jpg');*/
 	/*background-image: url('http://text4reform.org/img/capitol-bw.jpg');*/
 	/*background-image: url('http://www.inaugural.senate.gov/images/uploads/spotlight-012113-inauguration-day.jpg');*/
-	
+
 	background-repeat: no-repeat;
 	background-size: 100%;
-	margin-left: 50px;
-	margin-right: 50px;
-	height: 500px;
+	margin-left: 0px;
+	margin-right: 0px;
+	height: 550px;
 	/*background-position: bottom;*/
 	/*background-color: white;*/
-	/*-webkit-filter: blur(2px);
-	-moz-filter: blur(2px);
-	-o-filter: blur(2px);
-	-ms-filter: blur(2px);
-	filter: blur(2px);*/
+	-webkit-filter: blur(0px) opacity(1) contrast(1) grayscale(1);
+	-moz-filter: blur(0px) opacity(1) contrast(1) grayscale(1);
+	-o-filter: blur(0px) opacity(1) contrast(1) grayscale(1);
+	-ms-filter: blur(0px) opacity(1) contrast(1) grayscale(1);
+	filter: blur(0px) opacity(1) contrast(1) grayscale(1);
 }
 
 .jumbotron h1{
 	color: black;
 	font-size: 48px;
+	position: absolute;
+    left:0;
+    top: 0;
+}
+
+.jumbotron .signup{
+	background-color: white;
+	padding: 20px;
+	width: 280px;
+}
+
+.jumbotron .signup p{
+	font-size: 14px;
+}
+
+.jumbotron .signup .btn{
+	width: 100%;
 }
 
 .marketing .featurette{
