@@ -1,322 +1,117 @@
-/*@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,600);*/
-
-html {
-	position: relative;
-	min-height: 100%;
-}
-
 body{
-	background-color: black;
-	color: white;
 	font-family: 'Open Sans', sans-serif;
-	font-weight: lighter;
-	margin-bottom: 230px;
-	margin-top: 0px;
-	padding-top: 0px !important;
-}
-
-/* --------- general --------*/
-
-.black{
-	color: black;
+	font-weight: normal;
 }
 
 .blue{
 	color: #38a0f4;
 }
 
-.white{
-	color: white;
-}
-
-.medium{
-	margin-bottom: 30px;
-}
-
-.alpha-text{
-	background: rgba(120, 120, 120, .55);
-}
-
-.font-extra-big{
-	font-size: 28px;
-}
-
-.font-big{
-	font-size: 26px;
-}
-
-.font-large{
-	font-size: 22px;
-}
-
-.font-medium{
-	font-size: 18px;
-}
-
-.font-normal{
-	font-size: 14px;
-}
-
-.font-small{
+.nav a{
 	font-size: 12px;
+	
+	padding: 14px 10px;
+	text-transform: uppercase;
+	color: #38a0f4;
 }
 
-.user_input{
-	width: 250px;
-	position: absolute;
-	/*padding-top: 20px;*/
-	margin-left: auto;
-	margin-right: auto;
-	left: 0;
-	right: 0;
+.nav ul{
+	margin-top: 10px;
 }
 
-.page-wrapper {
-	background-image: url('http://text4reform.org/img/capitol-bw.jpg');
-	background-size: cover;
+.nav li{
+	display: inline;
 }
 
-a{
-	color: white;
-	text-decoration: none !important;
+.nav p{
+	font-size: 25px;
 }
 
-a:hover {
-	color: white;
-	text-decoration: underline !important;
+.nav .container{
+	margin-top: 15px;	
 }
 
-/* Alerts */
-.alert {
-	position: absolute;
-	margin-bottom: 0px;
-	padding: 7px;
-	width: 100%;
+.nav .row{
+	height: 45px;
 }
 
-/* FB like */
-.fb-like{
-	text-align: right;
+.jumbotron{
+	/*background-image: url('http://2.bp.blogspot.com/-5pdZ3yunyqs/TgjHlBava3I/AAAAAAAAALI/7ZU7sr4oaso/s1600/05-Capitol%2BBuilding.jpg');*/
+	/*background-image: url('http://2s2u.com/p2go.com/wp-content/uploads/2011/06/Eastern-side-of-the-US-Capitol-Building-and-The-Mall-with-The-George-Washington-Monument-in-the-distance-at-sunset-Washington-D.C..jpg');*/
+	/*background-image: url('https://bradtroyphotography.files.wordpress.com/2012/05/us_capitol_building_8.jpg');*/
+	/*background-image: url('http://www.hdwallpapers.in/walls/united_states_capitol-normal.jpg');*/
+	/*background-image: url('http://www.atpm.com/7.01/washington-dc/images/capitol-angle.jpg');*/
+	/*background-image: url('http://cecblog.typepad.com/.a/6a00d83452098b69e2019b00404a89970d-pi');*/
+	/*background-image: url('http://www.seriouswheels.com/pics-2006/2006-Cadillac-DTS-Presidential-Limousine-FA-Capitol-Building-1600x1200.jpg');*/
+	/*background-image: url('http://text4reform.org/img/capitol-bw.jpg');*/
+	/*background-image: url('http://www.inaugural.senate.gov/images/uploads/spotlight-012113-inauguration-day.jpg');*/
+	
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-left: 50px;
+	margin-right: 50px;
+	height: 500px;
+	/*background-position: bottom;*/
+	/*background-color: white;*/
+	/*-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px);
+	-ms-filter: blur(2px);
+	filter: blur(2px);*/
 }
 
-.fb-iframe{
-	border:none; 
-	overflow:hidden; 
-	height: 37px;
-	width: 100px;
-	text-align: right;
-	padding-top: 17px;
+.jumbotron h1{
+	color: black;
+	font-size: 48px;
 }
 
-/* remove input spin button */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+.marketing .featurette{
+	padding-left: 100px;
+	padding-right: 100px;
+	height: 600px;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-
-#footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	/* Set the fixed height of the footer here */
-	/*height: 20px;*/
-	/*background-color: #f5f5f5;*/
-	background: rgba(120, 120, 120, .55);
-	padding-top: 6px;
-}
-
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-body > .container {
-	/*padding: 60px 15px 0;*/
-	padding-top: 0px;
-}
-.container .text-muted {
-	margin: 20px 0;
-}
-
-#footer > .container {
-	padding-right: 10px;
-	padding-left: 10px;
-	font-size: 11px;
-	text-align: center;
-}
-
-code {
-	font-size: 80%;
-}
-
-p.desktop-message {
-	display: show;
-	padding-bottom: 13px;
-	padding-top: 30px;
+.marketing .featurette-heading {
+	font-weight: 300;
+	line-height: 1.2;
+	letter-spacing: 1.5px;
 	
 }
 
-@media (min-width: 767px) {
-	p.mobile-message {
-		display: none !important;
-	}
+.marketing .btn {
+	margin-top: 140px;
+	padding: 14px 24px;
+	font-size: 21px;
 }
 
-@media (max-width: 767px) {
-	body {
-		padding-left: 0px;
-		padding-right: 0px;
-	}
-
-	body > .container {
-		/*padding: 60px 15px 0;*/
-		padding-left: 0px;
-		padding-top: 20px;
-		/*padding-right: 0px;*/
-	}
-
-	.page-wrapper{
-		padding-right: 0px;
-		padding-left: 0px;
-	}
-
-	.form-control {
-		height: 45px;
-	}
-
-	.user_input{
-		width: 80%;
-	}
-
-	h1{
-		font-size: 45px;
-		text-align: center;
-	}
-
-	#footer > .container{
-		font-size: 10px;
-		padding-top: 0px;
-		padding-bottom: 0px;
-		height: 5px;
-	}
-
-	#footer {
-		/* Set the fixed height of the footer here */
-		height: 30px;
-		padding-top: 6px;
-		/*padding-bottom: 2px;*/
-		margin-bottom: 0px;
-	}
-
-	.jumbotron{
-		/*padding: 0px;*/
-		/*padding-left: 0px;*/
-		padding-right: 5px;
-		padding-top: 0px;
-		padding-bottom: 0px;
-	}
-
-	p.desktop-message {
-		display: none;
-	}
-
-	p.mobile-message {
-		display: show !important;
-		font-size: 16px;
-		padding-bottom: 13px;
-		padding-top: 30px;
-		text-align: center;
-	}
+.marketing .row{
+	text-align: center;
 }
 
-/* old justified-nav.css
--------------------------------------------------- */
-
-.footer {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  margin-top: 40px;
-  border-top: 1px solid #eee;
+.marketing .btn-primary{
+	background-color: #38a0f4;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  background-color: transparent;
-}
-.jumbotron .btn {
-  padding: 14px 24px;
-  font-size: 21px;
+.marketing .btn-primary:hover{
+	background-color: #3276b1;
 }
 
-/* Customize the nav-justified links to be fill the entire space of the .navbar */
-
-.nav-justified {
-  background-color: #eee;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.nav-justified > li > a {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 0;
-  font-weight: bold;
-  color: #777;
-  text-align: center;
-  background-color: #e5e5e5; /* Old browsers */
-  background-image:    -moz-linear-gradient(top, #f5f5f5 0%, #e5e5e5 100%); /* FF3.6+ */
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(100%,#e5e5e5)); /* Chrome,Safari4+ */
-  background-image: -webkit-linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%); /* Chrome 10+,Safari 5.1+ */
-  background-image:      -o-linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%); /* Opera 11.10+ */
-  background-image:         linear-gradient(top, #f5f5f5 0%,#e5e5e5 100%); /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#e5e5e5',GradientType=0 ); /* IE6-9 */
-  background-repeat: repeat-x; /* Repeat the gradient */
-  border-bottom: 1px solid #d5d5d5;
-}
-.nav-justified > .active > a,
-.nav-justified > .active > a:hover,
-.nav-justified > .active > a:focus {
-  background-color: #ddd;
-  background-image: none;
-  box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
-}
-.nav-justified > li:first-child > a {
-  border-radius: 5px 5px 0 0;
-}
-.nav-justified > li:last-child > a {
-  border-bottom: 0;
-  border-radius: 0 0 5px 5px;
+.t4r{
+	font-weight: 500;
 }
 
-@media (min-width: 768px) {
-  .nav-justified {
-    max-height: 52px;
-  }
-  .nav-justified > li > a {
-    border-right: 1px solid #d5d5d5;
-    border-left: 1px solid #fff;
-  }
-  .nav-justified > li:first-child > a {
-    border-left: 0;
-    border-radius: 5px 0 0 5px;
-  }
-  .nav-justified > li:last-child > a {
-    border-right: 0;
-    border-radius: 0 5px 5px 0;
-  }
+footer{
+	margin-left: 40px;
+	margin-right: 40px;
+	text-align: center;
 }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  /* Remove the padding we set earlier */
-  .masthead,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
-  }
+footer .featurette-divider{
+	margin-bottom: 30px;
 }
 
+footer img{
+	height: 40px;
+	padding-top: 10px;
+	padding-left: 40px;
+}
