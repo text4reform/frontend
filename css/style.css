@@ -88,6 +88,16 @@ body{
 
 .jumbotron .signup .btn{
 	width: 100%;
+	margin-top: 10px;
+}
+
+.jumbotron .form-group{
+	margin-bottom: 5px;
+}
+
+.jumbotron .inline .form-control{
+	width: 118px;
+	display: inline;
 }
 
 .marketing .featurette{
@@ -122,8 +132,7 @@ body{
 }
 
 .learn-more{
-	max-height: 700px;
-	height: 700px;
+	min-height: 700px;
 	overflow: hidden;
 	position: relative;
 }
