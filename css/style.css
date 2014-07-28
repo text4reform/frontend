@@ -38,7 +38,7 @@ body{
 .jumbotron{
 	/*background-image: url('http://2.bp.blogspot.com/-5pdZ3yunyqs/TgjHlBava3I/AAAAAAAAALI/7ZU7sr4oaso/s1600/05-Capitol%2BBuilding.jpg');*/
 	/*background-image: url('http://2s2u.com/p2go.com/wp-content/uploads/2011/06/Eastern-side-of-the-US-Capitol-Building-and-The-Mall-with-The-George-Washington-Monument-in-the-distance-at-sunset-Washington-D.C..jpg');*/
-	background-image: url('https://bradtroyphotography.files.wordpress.com/2012/05/us_capitol_building_8.jpg');
+/*	background-image: url('https://bradtroyphotography.files.wordpress.com/2012/05/us_capitol_building_8.jpg');*/
 	/*background-image: url('http://www.hdwallpapers.in/walls/united_states_capitol-normal.jpg');*/
 	/*background-image: url('http://www.atpm.com/7.01/washington-dc/images/capitol-angle.jpg');*/
 	/*background-image: url('http://cecblog.typepad.com/.a/6a00d83452098b69e2019b00404a89970d-pi');*/
@@ -46,13 +46,26 @@ body{
 	/*background-image: url('http://text4reform.org/img/capitol-bw.jpg');*/
 	/*background-image: url('http://www.inaugural.senate.gov/images/uploads/spotlight-012113-inauguration-day.jpg');*/
 
-	background-repeat: no-repeat;
+	/*background-color: white;*/
+
+	padding-top: 0px;
+}
+
+.jumbotron .backgroud-picture{
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 1;
+
+	display: block;
+	background-image: url('https://bradtroyphotography.files.wordpress.com/2012/05/us_capitol_building_8.jpg');
+	height: 550px;
+
 	background-size: 100%;
 	margin-left: 0px;
 	margin-right: 0px;
 	height: 550px;
-	/*background-position: bottom;*/
-	background-color: white;
+
 	-webkit-filter: blur(0px) opacity(1) contrast(1) grayscale(1);
 	-moz-filter: blur(0px) opacity(1) contrast(1) grayscale(1);
 	-o-filter: blur(0px) opacity(1) contrast(1) grayscale(1);
@@ -60,17 +73,28 @@ body{
 	filter: blur(0px) opacity(1) contrast(1) grayscale(1);
 }
 
+.jumbotron .row{
+	position: relative;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	padding-top: 50px;
+	text-align: center;
+}
+
+.jumbotron .container{
+	margin-right: 50px;
+	margin-top: 0px;
+}
+
 .jumbotron h1{
-	color: black;
+	color: #38a0f4;
+	/*color: black;*/
 	font-weight: bold;
 	font-size: 48px;
 	/*position: absolute;*/
 	left:0;
 	top: 0;
-}
-
-.jumbotron .row{
-	text-align: center;
 }
 
 .jumbotron .signup{
@@ -89,6 +113,10 @@ body{
 .jumbotron .signup .btn{
 	width: 100%;
 	margin-top: 10px;
+}
+
+.jumbotron .signup .btn-primary{
+	background-color: #38a0f4;
 }
 
 .jumbotron .form-group{
