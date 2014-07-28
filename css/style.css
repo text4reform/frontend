@@ -7,6 +7,10 @@ body{
 	color: #38a0f4;
 }
 
+.t4r{
+	font-weight: 500;
+}
+
 .nav a{
 	font-size: 14px;
 	font-weight: bold;
@@ -48,7 +52,18 @@ body{
 
 	/*background-color: white;*/
 
+	width: 100%;
 	padding-top: 0px;
+	min-height: 565px;
+	padding-bottom: 0px;
+}
+
+
+.jumbotron .container{
+	margin-right: 120px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	min-height: inherit;
 }
 
 .jumbotron .backgroud-picture{
@@ -59,18 +74,48 @@ body{
 
 	display: block;
 	background-image: url('https://bradtroyphotography.files.wordpress.com/2012/05/us_capitol_building_8.jpg');
-	height: 550px;
+	background-repeat: no-repeat;
+	/*height: 550px;*/
 
 	background-size: 100%;
 	margin-left: 0px;
 	margin-right: 0px;
-	height: 550px;
+	min-height: inherit;
 
-	-webkit-filter: blur(0px) opacity(1) contrast(1) grayscale(1);
-	-moz-filter: blur(0px) opacity(1) contrast(1) grayscale(1);
-	-o-filter: blur(0px) opacity(1) contrast(1) grayscale(1);
-	-ms-filter: blur(0px) opacity(1) contrast(1) grayscale(1);
-	filter: blur(0px) opacity(1) contrast(1) grayscale(1);
+	-webkit-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
+	-moz-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
+	-o-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
+	-ms-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
+	filter: blur(0px) opacity(1) contrast(1) grayscale(0);
+}
+
+/*.jumbotron .phone-img{
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	padding-top: 182px;
+	text-align: left;
+	width: 100%;
+}*/
+
+.jumbotron .phone-img{
+	/*position: absolute;*/
+	/*left: 0;
+	right: 0;*/
+	z-index: 9999;
+	/*padding-top: 117px;*/
+	text-align: left;
+	/*margin-left: -85px;*/
+	width: 100%;
+	min-height: 565px;
+}
+
+.jumbotron .phone-img img{
+	width: 460px;
+	margin-left: -200px;
+	bottom: 0;
+	position: absolute;
 }
 
 .jumbotron .row{
@@ -78,13 +123,10 @@ body{
 	left: 0;
 	right: 0;
 	z-index: 9999;
-	padding-top: 50px;
+	/*padding-top: 50px;*/
 	text-align: center;
-}
-
-.jumbotron .container{
-	margin-right: 50px;
-	margin-top: 0px;
+	width: 100%;
+	min-height: inherit;
 }
 
 .jumbotron h1{
@@ -101,7 +143,7 @@ body{
 	margin-top: 40px;
 	background-color: white;
 	padding: 20px;
-	width: 280px;
+	width: 310px;
 	margin-right: auto;
 	margin-left: auto;
 }
@@ -110,13 +152,18 @@ body{
 	font-size: 14px;
 }
 
+.jumbotron .signup strong{
+	font-size: 15px;
+}
+
 .jumbotron .signup .btn{
 	width: 100%;
 	margin-top: 10px;
+	background-color: #38a0f4;
 }
 
-.jumbotron .signup .btn-primary{
-	background-color: #38a0f4;
+.jumbotron .signup .btn:hover{
+	background-color: #3276b1;
 }
 
 .jumbotron .form-group{
@@ -124,45 +171,16 @@ body{
 }
 
 .jumbotron .inline .form-control{
-	width: 118px;
+	/*width: 118px;*/
+	width: 133px;
 	display: inline;
 }
 
-.marketing .featurette{
-	padding-left: 100px;
-	padding-right: 100px;
-	height: 600px;
-}
-
-.marketing .featurette-heading {
-	font-weight: 300;
-	line-height: 1.2;
-	letter-spacing: 1.5px;
-	
-}
-
-.marketing .btn {
-	margin-top: 140px;
-	padding: 14px 24px;
-	font-size: 21px;
-}
-
-.marketing .row{
-	text-align: center;
-}
-
-.marketing .btn-primary{
-	background-color: #38a0f4;
-}
-
-.marketing .btn-primary:hover{
-	background-color: #3276b1;
-}
-
 .learn-more{
-	min-height: 700px;
+	min-height: 550px;
 	overflow: hidden;
 	position: relative;
+	margin-top: 80px;
 }
 
 .learn-more .row{
@@ -208,9 +226,41 @@ body{
 	filter: opacity(.6);
 }
 
-.t4r{
-	font-weight: 500;
+.marketing{
+	height: 700px;
 }
+
+.marketing .featurette{
+	padding-left: 100px;
+	padding-right: 100px;
+	
+}
+
+.marketing .featurette-heading {
+	font-weight: 300;
+	line-height: 1.2;
+	letter-spacing: 1.5px;
+	
+}
+
+.marketing .btn {
+	margin-top: 140px;
+	padding: 14px 24px;
+	font-size: 21px;
+}
+
+.marketing .row{
+	text-align: center;
+}
+
+.marketing .btn-primary{
+	background-color: #38a0f4;
+}
+
+.marketing .btn-primary:hover{
+	background-color: #3276b1;
+}
+
 
 footer{
 	margin-left: 40px;
