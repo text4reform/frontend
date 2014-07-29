@@ -13,15 +13,19 @@ $('form').submit(function(e) {
 
 var $phone   = $('#input_phone');
 var $zipcode = $('#input_zip');
-var $warning = $('#warning-alert');
-var $success = $('#success-alert');
-var $error   = $('#error-alert');
+var $alert   = $('#message-alert'); 
+// var $warning = $('#warning-alert');
+// var $success = $('#success-alert');
+// var $error   = $('#error-alert');
 
 function warning(msg) {
-  $success.addClass('hide');
-  $error.addClass('hide');
-  $warning.text(msg);
-  $warning.removeClass('hide');
+  // $success.addClass('hide');
+  // $error.addClass('hide');
+  $alert.text(msg);
+
+  console.log("Warning");
+
+  // $warning.removeClass('hide');
 }
 
 // text me
@@ -72,7 +76,7 @@ $('#submit').click(function() {
       console.log("success: ", data);
       btn.button('reset');
       if (data.exists) {
-        warning('We already texted that number recently.');
+        warning('We have already texted that number recently.');
         $phone.val('');
         $zipcode.val('');
       } else {
@@ -80,25 +84,25 @@ $('#submit').click(function() {
         $phone.val('');
         $zipcode.val('');
         // show for a while and then hide alert
-        $warning.addClass('hide');
-        $error.addClass('hide');
-        $success.removeClass('hide').delay(5000).queue(function(){
-          $(this).addClass('hide').dequeue();
-        });
-      }
-    },
-    error: function(data) {
-      console.log("Error: ", data);
-      btn.button('reset')
+        // $warning.addClass('hide');
+        // $error.addClass('hide');
+        // $success.removeClass('hide').delay(5000).queue(function(){
+        //   $(this).addClass('hide').dequeue();
+        // });
+}
+},
+error: function(data) {
+  console.log("Error: ", data);
+  btn.button('reset')
       // clear phone and zip input
       $phone.val('');
       $zipcode.val('');
       // show for a while and then hide alert
-      $warning.addClass('hide');
-      $success.addClass('hide');
-      $error.removeClass('hide').delay(5000).queue(function(){
-        $(this).addClass('hide').dequeue();
-      });
-    }});
+      // $warning.addClass('hide');
+      // $success.addClass('hide');
+      // $error.removeClass('hide').delay(5000).queue(function(){
+      //   $(this).addClass('hide').dequeue();
+      // });
+}});
 return false; 
 });

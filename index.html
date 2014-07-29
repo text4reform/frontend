@@ -88,13 +88,16 @@
 						<p><strong>New to Text4Reform? </strong>Sign up for free</p>
 						<form role="form">
 							<div class="form-group">
-								<input type="name" class="form-control" id="nameId" placeholder="Full Name">
+								<input type="name" class="form-control" id="input_name" placeholder="Full Name">
 							</div>
 							<div class="form-group inline">
-								<input type="phone" class="form-control full-left" id="phoneId" placeholder="Cell Phone">
-								<input type="zipcode" class="form-control full-right" id="zipId" placeholder="Zipcode">
+								<input type="phone" type="tel" class="form-control full-left" id="input_phone" 
+								placeholder="Cell Phone">
+								<input type="zipcode" class="form-control full-right" id="input_zip" 
+								placeholder="Zipcode">
 							</div>
-							<button type="submit" class="btn btn-primary">Sign up for Text4Reform</button>
+							<p id="message-alert" class="message-alert"></p>
+							<button type="submit" class="btn btn-primary" id="submit" data-loading-text="Signing up...">Sign up for Text4Reform</button>
 						</form>
 					</div>
 				</div>
@@ -198,6 +201,8 @@
 		}
 	});
 	</script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
 

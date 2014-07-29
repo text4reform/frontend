@@ -183,8 +183,19 @@ a, a:hover{
 	background-color: #3276b1;
 }
 
+.jumbotron .signup .message-alert{
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	padding-top: 0px;
+	font-size: 12px;
+	/*min-height: 18px;*/
+	color: red;
+}
+
 .jumbotron .form-group{
-	margin-bottom: 5px;
+	margin-top: 10px;
+	margin-bottom: 2px;
 }
 
 .jumbotron .inline .form-control{
