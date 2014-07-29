@@ -231,6 +231,10 @@ body{
 	filter: opacity(.6);
 }
 
+.fancybox-opened .fancybox-skin{
+	background: rgba(0, 0, 0, .85);
+}
+
 .marketing{
 	height: 700px;
 }

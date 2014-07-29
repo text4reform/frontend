@@ -16,6 +16,13 @@
 	<!-- Custom styles for this template -->
 	<link href="css/style.css" rel="stylesheet">
 
+	<!-- Fancybox -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+	<!--<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+	<link rel="stylesheet" href="css/jquery.fancybox.css" type="text/css" media="screen" />-->
+	<script type="text/javascript" src="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.js"></script>
+	<link type="text/css" rel="stylesheet" href="//cdn.jsdelivr.net/fancybox/2.1.5/jquery.fancybox.css" />
+
 	<!-- Meta data -->
 	<meta name="Title" content="Text4Reform - Fight for Immigration Reform - FWD.us">
 	<meta name="Description" content="Text4Reform: Contact Congress in support of immigration reform via text messaging. Take action and text your ZIP CODE to (757) 707-8074 today.">
@@ -62,7 +69,7 @@
 			<div class="backgroud-picture"></div>
 
 			<div class="row">
-				
+
 				<div class="col-md-7">
 					<div class="phone-img"><img src="img/text4reform-iphone.png"/></div> 
 				</div>
@@ -94,7 +101,7 @@
 	</div>
 
 	<div class="learn-more">
-		
+
 		<div class="container">
 			<hr class="featurette-divider" id="learn-more-panel">
 			<div class="row">
@@ -107,13 +114,12 @@
 				</div>
 
 				<div class="col-md-6 pull-left">
-					<div class="video">
+					<div>
 						<img src="img/Justino-video.png" />
-						<a href=""><img class="play-btn" src="img/btnPlay.png"></img></a>
+						<a class="video fancybox.iframe" href="//player.vimeo.com/video/99567467#t=33?autoplay=0"><img class="play-btn" src="img/btnPlay.png"></img></a>
 						<!-- <iframe src="//player.vimeo.com/video/99567467#t=33?autoplay=0" width="350" height="197" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
 					</div>
-				</div>
-
+				</div>			
 			</div>
 		</div>
 	</div>
@@ -157,7 +163,22 @@
 		</p>
 		<p class="pull-right">Made in San Francisco</p> 
 	</footer>
+	<script type="text/javascript">
+	$(document).ready(function() {
 
+		$('.fancybox').fancybox();
+
+		$(".video").fancybox({
+			maxWidth : 853,
+			maxHeight : 455,
+			openEffect  : 'none',
+			closeEffect : 'none',
+			helpers : {
+				media : {}
+			}
+		});
+	});
+	</script>
 </body>
 </html>
 
