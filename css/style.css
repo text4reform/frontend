@@ -11,6 +11,10 @@ body{
 	font-weight: 500;
 }
 
+a, a:hover{
+	color: #38a0f4;
+}
+
 .nav a{
 	font-size: 14px;
 	font-weight: bold;
@@ -142,6 +146,10 @@ body{
 	/*position: absolute;*/
 	left:0;
 	top: 0;
+}
+
+.jumbotron .description a{
+	font-size: 16px;
 }
 
 .jumbotron .signup{
