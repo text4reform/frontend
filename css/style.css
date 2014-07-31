@@ -1,3 +1,5 @@
+/* ------ GENERAL ------*/
+
 body{
 	font-family: 'Open Sans', sans-serif;
 	font-weight: normal;
@@ -19,6 +21,16 @@ a, a:hover{
 	background: rgba(0, 0, 0, .85);
 }
 
+
+/* ------ NAVIGATION ------*/
+.nav .container{
+	margin-top: 15px;	
+}
+
+.nav p{
+	font-size: 30px;
+}
+
 .nav ul{
 	margin-top: 17px;
 }
@@ -27,25 +39,15 @@ a, a:hover{
 	display: inline;
 }
 
-.nav p{
-	font-size: 30px;
-}
-
-.nav .container{
-	margin-top: 15px;	
-}
-
-.nav .row{
-	height: 45px;
-}
-
 .nav a{
+	padding: 14px 10px;
 	font-size: 14px;
 	font-weight: bold;
-	text-transform: uppercase;
 	color: gray;
-	padding: 14px 10px;
+	text-transform: uppercase;
 }
+
+/* ------ JUMBOTRON PANEL ------*/
 
 .jumbotron{
 	width: 100%;
@@ -85,6 +87,16 @@ a, a:hover{
 	filter: blur(2.5px) opacity(1) contrast(1) grayscale(0);
 }
 
+.jumbotron .row{
+	position: relative;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	text-align: center;
+	width: 100%;
+	min-height: inherit;
+}
+
 .jumbotron .phone-img{
 	z-index: 9999;
 	text-align: left;
@@ -99,16 +111,6 @@ a, a:hover{
 	bottom: 0;
 	left: 0;
 	position: absolute;
-}
-
-.jumbotron .row{
-	position: relative;
-	left: 0;
-	right: 0;
-	z-index: 9999;
-	text-align: center;
-	width: 100%;
-	min-height: inherit;
 }
 
 .jumbotron .description h1{
@@ -126,6 +128,7 @@ a, a:hover{
 
 .jumbotron .description a{
 	font-size: 16px;
+	font-weight: bold;
 }
 
 .jumbotron .signup{
@@ -143,16 +146,6 @@ a, a:hover{
 
 .jumbotron .signup strong{
 	font-size: 15px;
-}
-
-.jumbotron .signup .btn{
-	width: 100%;
-	margin-top: 10px;
-	background-color: #38a0f4;
-}
-
-.jumbotron .signup .btn:hover{
-	background-color: #3276b1;
 }
 
 .jumbotron .signup .form-group{
@@ -176,6 +169,18 @@ a, a:hover{
 	color: red;
 }
 
+.jumbotron .signup .btn{
+	width: 100%;
+	margin-top: 10px;
+	background-color: #38a0f4;
+}
+
+.jumbotron .signup .btn:hover{
+	background-color: #3276b1;
+}
+
+/* ------ LEARN MORE PANEL ------*/
+
 .learn-more{
 	min-height: 550px;
 	overflow: hidden;
@@ -185,10 +190,6 @@ a, a:hover{
 
 .learn-more .row{
 	padding-top: 100px;
-}
-
-.learn-more img{
-	height: 350px;
 }
 
 .learn-more .featurette{
@@ -202,6 +203,10 @@ a, a:hover{
 
 .learn-more p{
 	font-size: 20px;
+}
+
+.learn-more img{
+	height: 350px;
 }
 
 .learn-more .play-btn{
@@ -226,8 +231,14 @@ a, a:hover{
 	filter: opacity(.6);
 }
 
+/* ------ MARKETING PANEL ------*/
+
 .marketing{
 	height: 700px;
+}
+
+.marketing .row{
+	text-align: center;
 }
 
 .marketing .featurette{
@@ -243,14 +254,10 @@ a, a:hover{
 	
 }
 
-.marketing .btn {
+.marketing .btn{
 	margin-top: 140px;
 	padding: 14px 24px;
 	font-size: 21px;
-}
-
-.marketing .row{
-	text-align: center;
 }
 
 .marketing .btn-primary{
@@ -260,6 +267,8 @@ a, a:hover{
 .marketing .btn-primary:hover{
 	background-color: #3276b1;
 }
+
+/* ------ FOOTER ------*/
 
 footer{
 	margin-left: 40px;
