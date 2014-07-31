@@ -51,17 +51,20 @@ a, a:hover{
 
 .jumbotron{
 	width: 100%;
-	padding-top: 0px;
-	min-height: 510px;
-	max-width: 1426px;
-	padding-bottom: 0px;
+	height: 510px;
+	padding: 0px;
+	margin: 0pc;
+	/*max-width: 1426px;*/
 }
 
 .jumbotron .container{
-	margin-right: 120px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	min-height: inherit;
+	width: inherit;
+	height: inherit;
+	padding: inherit;
+	margin: inherit;
+	/*margin-right: 120px;*/
+	/*margin-top: 0px;
+	margin-bottom: 0px;*/
 }
 
 .jumbotron .backgroud-picture{
@@ -73,12 +76,11 @@ a, a:hover{
 	display: block;
 	background-image: url('https://bradtroyphotography.files.wordpress.com/2012/05/us_capitol_building_8.jpg');
 	background-repeat: no-repeat;
-	/*height: 550px;*/
 
-	background-size: 100%;
-	margin-left: 0px;
-	margin-right: 0px;
-	min-height: inherit;
+	background-size: cover;
+	height: inherit;
+	padding: inherit;
+	margin: inherit;
 
 	-webkit-filter: blur(2.5px) opacity(1) contrast(1) grayscale(0);
 	-moz-filter: blur(2.5px) opacity(1) contrast(1) grayscale(0);
@@ -92,25 +94,46 @@ a, a:hover{
 	left: 0;
 	right: 0;
 	z-index: 9999;
-	text-align: center;
-	width: 100%;
-	min-height: inherit;
+	/*width: 100%;*/
+	
+	width: inherit;
+	height: inherit;
+	padding: inherit;
+	margin: inherit;
 }
 
 .jumbotron .phone-img{
-	z-index: 9999;
-	text-align: left;
-	width: 100%;
+	/*position: absolute;*/
+	/*text-align: left;*/
+	/*z-index: 9999;*/
+	/*width: 100%;*/
+	max-height: 510px;
+	/*margin-left: -100px;*/
+	/*width: 100%;
 	min-height: 510px;
-	max-width: 1426px;
+	max-width: 1426px;*/
 }
 
 .jumbotron .phone-img img{
-	width: 450px;
-	margin-left: -80px;
+	position: absolute;
+	width: 400px;
 	bottom: 0;
 	left: 0;
+	margin-left: -100px;
+}
+
+/*.jumbotron .phone-img img{
+	bottom: 0;
+	left: 0;
+	width: 450px;
+	margin-left: -80px;
 	position: absolute;
+}*/
+
+.jumbotron .main{
+	/*margin-right: 200px;*/
+	text-align: center;
+	margin-left: 35%;
 }
 
 .jumbotron .description h1{
@@ -120,7 +143,7 @@ a, a:hover{
 	line-height: 1;
 	letter-spacing: -1px;
 	font-size: 48px;
-	padding-top: 60px;
+	padding-top: 30px;
 	margin-bottom: 25px;
 	left:0;
 	top: 0;
@@ -185,28 +208,42 @@ a, a:hover{
 	min-height: 550px;
 	overflow: hidden;
 	position: relative;
-	margin-top: 80px;
+	/*margin-top: 80px;*/
 }
 
 .learn-more .row{
-	padding-top: 100px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	/*text-align: center;*/
 }
 
 .learn-more .featurette{
-	margin-left: 100px;
+	/*margin-left: 100px;*/
+	margin-bottom: 50px;
 }
 
 .learn-more .featurette-heading{
 	font-size: 40px;
 	margin-top: 70px;
+	margin-bottom: 20px;
 }
 
 .learn-more p{
 	font-size: 20px;
 }
 
+.learn-more .videorette{
+	/*width: 100%;*/
+	/*margin-right: 0;
+	margin-left: 0;
+	text-align: center;*/
+}
+
 .learn-more img{
-	height: 350px;
+	max-height: 350px;
+	max-width: 583px;
+	width: 100%;
+	text-align: center;
 }
 
 .learn-more .play-btn{
