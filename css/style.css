@@ -15,12 +15,8 @@ a, a:hover{
 	color: #38a0f4;
 }
 
-.nav a{
-	font-size: 14px;
-	font-weight: bold;
-	text-transform: uppercase;
-	color: gray;
-	padding: 14px 10px;
+.fancybox-opened .fancybox-skin{
+	background: rgba(0, 0, 0, .85);
 }
 
 .nav ul{
@@ -43,26 +39,21 @@ a, a:hover{
 	height: 45px;
 }
 
+.nav a{
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: gray;
+	padding: 14px 10px;
+}
+
 .jumbotron{
-	/*background-image: url('http://2.bp.blogspot.com/-5pdZ3yunyqs/TgjHlBava3I/AAAAAAAAALI/7ZU7sr4oaso/s1600/05-Capitol%2BBuilding.jpg');*/
-	/*background-image: url('http://2s2u.com/p2go.com/wp-content/uploads/2011/06/Eastern-side-of-the-US-Capitol-Building-and-The-Mall-with-The-George-Washington-Monument-in-the-distance-at-sunset-Washington-D.C..jpg');*/
-/*	background-image: url('https://bradtroyphotography.files.wordpress.com/2012/05/us_capitol_building_8.jpg');*/
-	/*background-image: url('http://www.hdwallpapers.in/walls/united_states_capitol-normal.jpg');*/
-	/*background-image: url('http://www.atpm.com/7.01/washington-dc/images/capitol-angle.jpg');*/
-	/*background-image: url('http://cecblog.typepad.com/.a/6a00d83452098b69e2019b00404a89970d-pi');*/
-	/*background-image: url('http://www.seriouswheels.com/pics-2006/2006-Cadillac-DTS-Presidential-Limousine-FA-Capitol-Building-1600x1200.jpg');*/
-	/*background-image: url('http://text4reform.org/img/capitol-bw.jpg');*/
-	/*background-image: url('http://www.inaugural.senate.gov/images/uploads/spotlight-012113-inauguration-day.jpg');*/
-
-	/*background-color: white;*/
-
 	width: 100%;
 	padding-top: 0px;
 	min-height: 510px;
 	max-width: 1426px;
 	padding-bottom: 0px;
 }
-
 
 .jumbotron .container{
 	margin-right: 120px;
@@ -87,7 +78,6 @@ a, a:hover{
 	margin-right: 0px;
 	min-height: inherit;
 
-
 	-webkit-filter: blur(2.5px) opacity(1) contrast(1) grayscale(0);
 	-moz-filter: blur(2.5px) opacity(1) contrast(1) grayscale(0);
 	-o-filter: blur(2.5px) opacity(1) contrast(1) grayscale(0);
@@ -95,24 +85,9 @@ a, a:hover{
 	filter: blur(2.5px) opacity(1) contrast(1) grayscale(0);
 }
 
-/*.jumbotron .phone-img{
-	position: absolute;
-	left: 0;
-	right: 0;
-	z-index: 9999;
-	padding-top: 182px;
-	text-align: left;
-	width: 100%;
-}*/
-
 .jumbotron .phone-img{
-	/*position: absolute;*/
-	/*left: 0;
-	right: 0;*/
 	z-index: 9999;
-	/*padding-top: 117px;*/
 	text-align: left;
-	/*margin-left: -85px;*/
 	width: 100%;
 	min-height: 510px;
 	max-width: 1426px;
@@ -131,23 +106,20 @@ a, a:hover{
 	left: 0;
 	right: 0;
 	z-index: 9999;
-	/*padding-top: 50px;*/
 	text-align: center;
 	width: 100%;
 	min-height: inherit;
 }
 
-.jumbotron h1{
+.jumbotron .description h1{
 	/*color: #38a0f4;*/
 	color: black;
-	/*font-weight: bold;*/
 	font-weight: 300;
 	line-height: 1;
 	letter-spacing: -1px;
 	font-size: 48px;
 	padding-top: 60px;
 	margin-bottom: 25px;
-	/*position: absolute;*/
 	left:0;
 	top: 0;
 }
@@ -183,6 +155,17 @@ a, a:hover{
 	background-color: #3276b1;
 }
 
+.jumbotron .signup .form-group{
+	margin-top: 10px;
+	margin-bottom: 2px;
+}
+
+.jumbotron .signup .inline .form-control{
+	/*width: 118px;*/
+	width: 133px;
+	display: inline;
+}
+
 .jumbotron .signup .message-alert{
 	padding-bottom: 0px;
 	margin-bottom: 0px;
@@ -191,17 +174,6 @@ a, a:hover{
 	font-size: 12px;
 	/*min-height: 18px;*/
 	color: red;
-}
-
-.jumbotron .form-group{
-	margin-top: 10px;
-	margin-bottom: 2px;
-}
-
-.jumbotron .inline .form-control{
-	/*width: 118px;*/
-	width: 133px;
-	display: inline;
 }
 
 .learn-more{
@@ -254,10 +226,6 @@ a, a:hover{
 	filter: opacity(.6);
 }
 
-.fancybox-opened .fancybox-skin{
-	background: rgba(0, 0, 0, .85);
-}
-
 .marketing{
 	height: 700px;
 }
@@ -292,7 +260,6 @@ a, a:hover{
 .marketing .btn-primary:hover{
 	background-color: #3276b1;
 }
-
 
 footer{
 	margin-left: 40px;
