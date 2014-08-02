@@ -12,6 +12,7 @@
 	<!-- Bootstrap core CSS -->
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/carousel.css" rel="stylesheet">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
 
 	<!-- Custom styles for this template -->
 	<link href="css/style.css" rel="stylesheet">
@@ -115,7 +116,7 @@
 				</div>
 				<div class="col-md-7 pull-left videorette">
 					<div>
-						<img src="img/Justino-video.png" />
+						<img src="img/Justino-video.png" class="img-rounded" />
 						<a class="video fancybox.iframe" href="//player.vimeo.com/video/99567467#t=33?autoplay=0"><img class="play-btn" src="img/btnPlay.png"></img></a>
 					</div>
 				</div>			
@@ -164,6 +165,17 @@
 	</footer>
 	<script type="text/javascript">
 	$(document).ready(function() {
+
+		// Set jumbotron's height to window height
+		var windowHeight 	= $(window).height();
+		var windowWidth		= $(window).width();
+		var navHeight 		= $('.nav').height(); 
+		var jumbotronHeight	= $('.jumbotron').height();
+		var minWidth		= 1000;
+
+		if(windowHeight > jumbotronHeight && windowWidth > minWidth){
+			$('.jumbotron').height(windowHeight-navHeight);
+		}
 
 		$('.fancybox').fancybox();
 
