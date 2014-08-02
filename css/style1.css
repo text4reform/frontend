@@ -1,0 +1,362 @@
+/* ------ GENERAL ------*/
+
+html { 
+	height: 100%;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: normal;
+}
+
+.blue{
+	color: #38a0f4;
+}
+
+.t4r{
+	font-weight: 500;
+}
+
+a, a:hover{
+	color: #38a0f4;
+}
+
+.fancybox-opened .fancybox-skin{
+	background: rgba(0, 0, 0, .85);
+}
+
+
+/* ------ NAVIGATION ------*/
+/*.nav .container{
+	margin-top: 15px;
+	color: black;	
+}*/
+
+.nav{
+	padding-top: 15px;
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+.nav p{
+	font-size: 35px;
+	font-weight: 600;
+	letter-spacing: -1.5px;
+	color: white;
+	/*text-transform: uppercase;*/
+}
+
+.nav ul{
+	margin-top: 17px;
+}
+
+.nav li{
+	display: inline;
+}
+
+.nav li a{
+	padding: 14px 10px;
+	font-size: 14px;
+	font-weight: bold;
+	/*color: gray;*/
+	color: white;
+	font-weight: bold;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+}
+
+/* ------ JUMBOTRON PANEL ------*/
+
+.jumbotron{
+	width: 100%;
+	height: 510px;
+	padding: 0px;
+	margin: 0px;
+	/*max-width: 1426px;*/
+	color: black;
+}
+
+.jumbotron .container{
+	width: inherit;
+	height: inherit;
+	padding: inherit;
+	margin: inherit;
+	/*margin-right: 120px;*/
+	/*margin-top: 0px;
+	margin-bottom: 0px;*/
+}
+
+.jumbotron .backgroud-picture{
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 1;
+
+	display: block;
+	background-image: url('http://williambeem.com/wp-content/uploads/2012/05/Capitol-Reflection.jpg');
+	background-repeat: no-repeat;
+
+	background-size: cover;
+	height: inherit;
+	padding: inherit;
+	margin: inherit;
+
+	-webkit-filter: blur(0px) opacity(.9) contrast(1) grayscale(0);
+	-moz-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
+	-o-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
+	-ms-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
+	filter: blur(0px) opacity(1) contrast(1) grayscale(0);
+}
+
+.jumbotron .row{
+	position: relative;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	/*width: 100%;*/
+	
+	width: inherit;
+	height: inherit;
+	padding: inherit;
+	margin: inherit;
+}
+
+.jumbotron .phone-img{
+	/*position: absolute;*/
+	/*text-align: left;*/
+	/*z-index: 9999;*/
+	/*width: 100%;*/
+	max-height: 510px;
+	/*margin-left: -100px;*/
+	/*width: 100%;
+	min-height: 510px;
+	max-width: 1426px;*/
+}
+
+.jumbotron .phone-img img{
+	position: absolute;
+	width: 400px;
+	bottom: 0;
+	left: 0;
+	margin-left: 60px;
+}
+
+/*.jumbotron .phone-img img{
+	bottom: 0;
+	left: 0;
+	width: 450px;
+	margin-left: -80px;
+	position: absolute;
+}*/
+
+.jumbotron .main{
+	/*margin-right: 200px;*/
+	text-align: center;
+	/*margin-left: 35%;*/
+	height: auto;
+	/*padding-right: 24px;*/
+	/*margin-right: 750px;*/
+	margin-left: 110px;
+	/*padding-top: 30px;*/
+	padding-top: 2%;
+}
+
+.jumbotron .description h1{
+	/*color: #38a0f4;*/
+	color: black;
+	font-weight: 700;
+	line-height: 1;
+	letter-spacing: -1px;
+	font-size: 48px;
+/*	padding-top: 30px;
+	padding-top: 10%;*/
+	margin-bottom: 25px;
+}
+
+.jumbotron .description p{
+	font-weight: 300;
+	font-size: 20px;
+}
+
+.jumbotron .description a{
+	font-size: 16px;
+	font-weight: bold;
+	color: black;
+	text-decoration: underline;
+}
+
+.jumbotron .description a:hover{
+	color: #38a0f4;
+	text-decoration: underline;
+}
+
+
+.jumbotron .signup{
+	/*margin-top: 110px;*/
+	margin-top: 50px;
+	background-color: white;
+	padding: 20px;
+	width: 310px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.jumbotron .signup p{
+	font-size: 14px;
+}
+
+.jumbotron .signup strong{
+	font-size: 15px;
+}
+
+.jumbotron .signup .form-group{
+	margin-top: 10px;
+	margin-bottom: 2px;
+}
+
+.jumbotron .signup .inline .form-control{
+	/*width: 118px;*/
+	width: 133px;
+	display: inline;
+}
+
+.jumbotron .signup .message-alert{
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	padding-top: 0px;
+	font-size: 12px;
+	/*min-height: 18px;*/
+	color: red;
+}
+
+.jumbotron .signup .btn{
+	width: 100%;
+	margin-top: 10px;
+	background-color: #38a0f4;
+}
+
+.jumbotron .signup .btn:hover{
+	background-color: #3276b1;
+}
+
+/* ------ LEARN MORE PANEL ------*/
+
+.learn-more{
+	min-height: 550px;
+	overflow: hidden;
+	position: relative;
+	/*margin-top: 80px;*/
+}
+
+.learn-more .row{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	/*text-align: center;*/
+}
+
+.learn-more .featurette{
+	/*margin-left: 100px;*/
+	margin-bottom: 50px;
+}
+
+.learn-more .featurette-heading{
+	font-size: 40px;
+	margin-top: 70px;
+	margin-bottom: 20px;
+}
+
+.learn-more p{
+	font-size: 20px;
+}
+
+.learn-more .videorette{
+	/*width: 100%;*/
+	/*margin-right: 0;
+	margin-left: 0;
+	text-align: center;*/
+}
+
+.learn-more img{
+	max-height: 350px;
+	max-width: 583px;
+	width: 100%;
+	text-align: center;
+}
+
+.learn-more .play-btn{
+	top: 40%;
+	left: 40%;
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	z-index: 3;
+	-webkit-filter: opacity(.8);
+	-moz-filter: opacity(.8);
+	-o-filter: opacity(.8);
+	-ms-filter: opacity(.8);
+	filter: opacity(.8);	
+}
+
+.learn-more .play-btn:hover{
+	-webkit-filter: opacity(.6);
+	-moz-filter: opacity(.6);
+	-o-filter: opacity(.6);
+	-ms-filter: opacity(.6);
+	filter: opacity(.6);
+}
+
+/* ------ MARKETING PANEL ------*/
+
+.marketing{
+	height: 700px;
+}
+
+.marketing .row{
+	text-align: center;
+}
+
+.marketing .featurette{
+	padding-left: 100px;
+	padding-right: 100px;
+	
+}
+
+.marketing .featurette-heading {
+	font-weight: 300;
+	line-height: 1.2;
+	letter-spacing: 1.5px;
+	
+}
+
+.marketing .btn{
+	margin-top: 140px;
+	padding: 14px 24px;
+	font-size: 21px;
+}
+
+.marketing .btn-primary{
+	background-color: #38a0f4;
+}
+
+.marketing .btn-primary:hover{
+	background-color: #3276b1;
+}
+
+/* ------ FOOTER ------*/
+
+footer{
+	margin-left: 40px;
+	margin-right: 40px;
+	text-align: center;
+}
+
+footer .featurette-divider{
+	margin-bottom: 30px;
+}
+
+footer img{
+	height: 40px;
+	padding-top: 10px;
+	padding-left: 40px;
+}
