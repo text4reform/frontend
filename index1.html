@@ -76,7 +76,7 @@
 
 			<div class="row">
 				<div class="nav">
-				<a href=""><p class="pull-left t4r">Text<span class="blue">4</span>Reform</p></a>
+					<a href=""><p class="pull-left t4r">Text<span class="blue">4</span>Reform</p></a>
 					<ul class="pull-right">
 						<li><a href="">About Us</a></li>
 						<li><a href="#home">Sign up</a></li>
@@ -107,6 +107,9 @@
 						</form>
 					</div>
 				</div>
+				<!-- <div class="arrow-down">
+					<p><span class="glyphicon glyphicon-chevron-down"></span></p>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -127,6 +130,28 @@
 						<a class="video fancybox.iframe" href="//player.vimeo.com/video/99567467#t=33?autoplay=0"><img class="play-btn" src="img/btnPlay.png"></img></a>
 					</div>
 				</div>			
+			</div>
+		</div>
+	</div>
+
+	<div class="features">
+		<div class="container">
+			<hr class="featurette-divider">
+			<div class="row">
+				<div class="col-md-6 pull-left">
+					<div class="featurette">
+						<h1 class="featurette-heading">Texting is easy. <span class="text-muted">Take action today.</span></h1>
+						<p class="lead">Stand up with the other 88% of voters who support a pathway to citizenship for DREAMers. Easily send letters and call your representative through texting.</p> 
+						<!-- <ul>
+							<li><h4>Find out where your representative stands on the issue</h4></li>
+							<li><h4>Easily call and send letters to your representative</h4></li>
+							<li><h4>... all through texting</h4></li>
+						</ul> -->
+					</div>
+				</div>	
+				<div class="col-md-6 pull-right">
+					<div class="phone-img"><img src="img/t4r-phone.png"/></div>
+				</div>	
 			</div>
 		</div>
 	</div>
@@ -183,20 +208,20 @@
 		if(windowHeight > jumbotronHeight && windowWidth > minWidth){
 			$('.jumbotron').height(windowHeight);
 			// +navHeight);
-		}
+}
 
-		$('.fancybox').fancybox();
+$('.fancybox').fancybox();
 
-		$(".video").fancybox({
-			maxWidth : 853,
-			maxHeight : 455,
-			openEffect  : 'none',
-			closeEffect : 'none',
-			helpers : {
-				media : {}
-			}
-		});
-	});
+$(".video").fancybox({
+	maxWidth : 853,
+	maxHeight : 455,
+	openEffect  : 'none',
+	closeEffect : 'none',
+	helpers : {
+		media : {}
+	}
+});
+});
 
 	$('a[href*=#]').click(function() {
 		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

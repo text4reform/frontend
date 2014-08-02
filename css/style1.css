@@ -240,6 +240,20 @@ a, a:hover{
 	background-color: #3276b1;
 }
 
+/*.jumbotron .arrow-down{
+	position: absolute;
+	height: auto;
+	width: 100%;
+	text-align: center;
+	bottom: 0;
+	vertical-align: bottom;
+}
+
+.jumbotron .arrow-down p{
+	color: white;
+	font-size: 40px;
+}*/
+
 /* ------ LEARN MORE PANEL ------*/
 
 .learn-more{
@@ -306,10 +320,33 @@ a, a:hover{
 	filter: opacity(.6);
 }
 
+/* ------ FEATURES PANEL ------*/
+.features .phone-img{
+	max-height: auto;
+}
+
+.features .phone-img img{
+	/*position: absolute;*/
+	width: 500px;
+	/*bottom: 0;
+	left: 0;*/
+	/*margin-left: 60px;*/
+}
+
+.features .lead{
+	padding-top: 15px;
+	font-size: 20px;
+	letter-spacing: 1.2px;
+}
+
 /* ------ MARKETING PANEL ------*/
 
 .marketing{
 	height: 700px;
+}
+
+.marketing .featurette-divider{
+	margin-top: 0px;
 }
 
 .marketing .row{
