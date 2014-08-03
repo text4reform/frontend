@@ -4,29 +4,42 @@ var server        = '162.209.126.106:1234';
 var phoneRegexp   = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 var zipCodeRegexp = /^([0-9]{5})(?:-[0-9]{4})?$/;
 
+var $name    = $('#input_name');
+var $phone   = $('#input_phone');
+var $zipcode = $('#input_zip');
+var $alert   = $('#message-alert'); 
+
+// Setup fancybox
+$(document).ready(function() {
+  fancybox();
+  $name.focus();
+});
+
+function fancybox(){
+  $('.fancybox').fancybox();
+
+  $(".video").fancybox({
+    maxWidth : 853,
+    maxHeight : 455,
+    openEffect  : 'none',
+    closeEffect : 'none',
+    helpers : {
+      media : {}
+    }
+  });
+}
+
+function warning(msg) {
+  console.log("Warning");
+  $alert.text(msg);
+}
+
 // kill form submit
 $('form').submit(function(e) {
   e.preventDefault();
   // $('#submit').click();
   return false;
 });
-
-var $phone   = $('#input_phone');
-var $zipcode = $('#input_zip');
-var $alert   = $('#message-alert'); 
-// var $warning = $('#warning-alert');
-// var $success = $('#success-alert');
-// var $error   = $('#error-alert');
-
-function warning(msg) {
-  // $success.addClass('hide');
-  // $error.addClass('hide');
-  $alert.text(msg);
-
-  console.log("Warning");
-
-  // $warning.removeClass('hide');
-}
 
 // text me
 $('#submit').click(function() {
@@ -40,8 +53,8 @@ $('#submit').click(function() {
   var result = phoneRegexp.exec(phone);
   if(!result){
     console.log("fail phone");
-    $zipcode.val('').focus();
     $phone.val('').focus();
+    $zipcode.val('');
     warning('Whoops, invalid phone number.');
     return false;
   }else{
@@ -81,28 +94,46 @@ $('#submit').click(function() {
         $zipcode.val('');
       } else {
         // clear phone and zip input
+        warning('Thanks! We will contact you shortly via text.');
         $phone.val('');
         $zipcode.val('');
-        // show for a while and then hide alert
-        // $warning.addClass('hide');
-        // $error.addClass('hide');
-        // $success.removeClass('hide').delay(5000).queue(function(){
-        //   $(this).addClass('hide').dequeue();
-        // });
-}
-},
-error: function(data) {
-  console.log("Error: ", data);
-  btn.button('reset')
+      }
+    },
+    error: function(data) {
+      console.log("Error: ", data);
+      btn.button('reset')
       // clear phone and zip input
       $phone.val('');
       $zipcode.val('');
-      // show for a while and then hide alert
-      // $warning.addClass('hide');
-      // $success.addClass('hide');
-      // $error.removeClass('hide').delay(5000).queue(function(){
-      //   $(this).addClass('hide').dequeue();
-      // });
-}});
-return false; 
+      warning('Sorry, we were unable to submit your information this time.');
+    }});
+  return false; 
+});
+
+// Scroll to anchors
+$('a[href*=#]').click(function() {
+  if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+    var $target = $(this.hash);
+    $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+
+    if ($target.length) {
+      var targetOffset = $target.offset().top;
+      $('html,body')
+      .animate({scrollTop: targetOffset}, 700);
+
+      if(targetOffset == 0){
+        $name.focus(); 
+      }
+      return false;
+    }
+  }
+});
+
+// Scroll to the top
+$('#signup').click(function(){
+  $('html,body').animate({scrollTop: 0}, 800,
+    function(){
+      $name.focus();
+    });
+  return false; 
 });

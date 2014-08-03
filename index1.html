@@ -47,6 +47,20 @@
 	<meta property="og:description" content="Urge Congress to take action on immigration reform. We will deliver your message as posted letter on your behalf." />
 	<meta property="og:image" content="http://text4reform.org/img/text4reform-debugdc.jpg" />
 
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+    // Set jumbotron's height to window height
+    var jumbotronHeight = $('.jumbotron').height();
+    var windowHeight    = $(window).height();
+    var windowWidth     = $(window).width();
+    var minWidth        = 1000;
+
+    if(windowHeight > jumbotronHeight && windowWidth > minWidth){
+    	$('.jumbotron').height(windowHeight);
+    }});
+	</script>
+
 	<!-- Analytics Tracking  -->
 	<script>
 	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -69,7 +83,7 @@
 			</ul>
 		</div>
 	</div> -->
-	<div class="jumbotron">
+	<div class="jumbotron" id="home">
 		<div class="container">
 
 			<div class="backgroud-picture"></div>
@@ -153,6 +167,7 @@
 					<div class="phone-img"><img src="img/t4r-phone.png"/></div>
 				</div>	
 			</div>
+			<hr class="featurette-divider">
 		</div>
 	</div>
 
@@ -168,12 +183,42 @@
 		<p class="lead">Text4Reform is a brand new immigration advocacy tool. With Text4Reform you can easily contact your representative and take action in support of immigration reform via text messaging. Sign up for free and you will immediately receive a text message with simple directions to get started. Once signed up you will be able to send a personalized letter to your representative - we will deliver your text as mail for free.</p>
 	</div> -->
 
+	<div class="share">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-md-12">
+
+					<h1 class="featurette-heading">Invite a friend</h1>
+					<div class="signup-a-friend">
+						<form role="form">
+							
+							<div class="form-group inline">
+								<input type="text" class="form-control" id="input_yourname" 
+								placeholder="Your Name">
+
+								<input type="tel" class="form-control" id="input_friendphone" 
+								placeholder="Friend's Cell Phone">
+
+								<button type="submit" class="btn btn-primary" id="submit" data-loading-text="Signing up...">Invite!</button>
+							</div>
+
+							<p id="message-alert" class="message-alert"></p>
+							
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="container marketing">
 		<hr class="featurette-divider">
 		<div class="row featurette">
 			<h2 class="featurette-heading">Over <span class="blue">4,000</span> supporters of immigration reform are using 
 				<span class="t4r">Text<span class="blue">4</span>Reform</span></h2>
-				<button type="submit" class="btn btn-primary" data-loading-text="Sending...">Sign Up &#187;</button>
+				<button type="submit" id="signup" class="btn btn-primary" data-loading-text="Sending...">Sign Up &#187;</button>
 			</div>
 		</div>
 	</div>
@@ -195,48 +240,6 @@
 		</p>
 		<p class="pull-right">Made in San Francisco</p> 
 	</footer>
-	<script type="text/javascript">
-	$(document).ready(function() {
-
-		// Set jumbotron's height to window height
-		var windowHeight 	= $(window).height();
-		var windowWidth		= $(window).width();
-		var navHeight 		= $('.nav').height(); 
-		var jumbotronHeight	= $('.jumbotron').height();
-		var minWidth		= 1000;
-
-		if(windowHeight > jumbotronHeight && windowWidth > minWidth){
-			$('.jumbotron').height(windowHeight);
-			// +navHeight);
-}
-
-$('.fancybox').fancybox();
-
-$(".video").fancybox({
-	maxWidth : 853,
-	maxHeight : 455,
-	openEffect  : 'none',
-	closeEffect : 'none',
-	helpers : {
-		media : {}
-	}
-});
-});
-
-	$('a[href*=#]').click(function() {
-		if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-			var $target = $(this.hash);
-			$target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
-
-			if ($target.length) {
-				var targetOffset = $target.offset().top;
-				$('html,body')
-				.animate({scrollTop: targetOffset}, 700);
-				return false;
-			}
-		}
-	});
-	</script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
