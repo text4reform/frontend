@@ -1,12 +1,10 @@
 /* ------ GENERAL ------*/
 
-html { 
-	height: 100%;
-}
-
-body{
+html, body { 
 	font-family: 'Open Sans', sans-serif;
 	font-weight: normal;
+	padding-bottom: 0px;
+	height: 100%;
 }
 
 .blue{
@@ -69,7 +67,8 @@ a, a:hover{
 
 .jumbotron{
 	width: 100%;
-	height: 510px;
+	/*height: 510px;*/
+	height: 100%;
 	padding: 0px;
 	margin: 0px;
 	/*max-width: 1426px;*/
