@@ -137,3 +137,28 @@ $('#signup').click(function(){
     });
   return false; 
 });
+
+$('.twitter-button').hover(
+  function () {
+    $('.twitter-img').css({'-webkit-filter':'invert(100%)'});
+  }, 
+  function () {
+    $('.twitter-img').css({'-webkit-filter':'invert(50%)'});
+});
+
+$('.fb-button').hover(
+  function () {
+    $('.fb-img').css({'-webkit-filter':'invert(100%)'});
+  }, 
+  function () {
+    $('.fb-img').css({'-webkit-filter':'invert(50%)'});
+});
+
+$('.google-button').hover(
+  function () {
+    $('.google-img').css({'-webkit-filter':'invert(100%)'});
+  }, 
+  function () {
+    $('.google-img').css({'-webkit-filter':'invert(50%)'});
+});
+
