@@ -479,6 +479,7 @@ footer{
 	margin-left: 40px;
 	margin-right: 40px;
 	text-align: center;
+	margin-bottom: 20px;
 }
 
 footer .featurette-divider{
@@ -486,16 +487,19 @@ footer .featurette-divider{
 	margin-bottom: 30px;
 }
 
+
+footer h5{
+	padding-top: 60px;	
+}
+
 footer img{
-	height: 45px;
+	height: 40px;
 	padding-top: 10px;
 	padding-left: 40px;
 }
 
-footer .sponsors p{
-	margin-bottom: 20px;
+footer p{
+	margin-bottom: 30px;
+	padding-top: 10px;
 }
 
-footer .sponsors{
-	margin-bottom: 50px;
-}
