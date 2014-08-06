@@ -138,13 +138,41 @@ $('#signup').click(function(){
   return false; 
 });
 
+// change name input on invite a friend panel
+$name.change(function(){
+  var input = $name.val(); 
+  $('#input_yourname').val(input);
+});
+
+// when scroll over the invite panel, make the input
+// box for name or friend's phone number focused. 
+$(window).scroll(function() {
+  var yourName    = $('#input_yourname');
+  var friendPhone = $('#input_friendphone');
+  var hT          = $('#invite-panel').offset().top,
+      hH          = $('#invite-panel').outerHeight(),
+      wH          = $(window).height(),
+      wS          = $(this).scrollTop();
+  
+  if (wS > (hT+hH-wH)){
+    if(yourName.val().length == 0){
+      $(yourName).focus();
+    }else{
+      $(friendPhone).focus();
+    }
+  }
+
+});
+
+// change icon color when hover over. 
+// TODO: Can improve this to delete copy/paste.
 $('.twitter-button').hover(
   function () {
     $('.twitter-img').css({'-webkit-filter':'invert(100%)'});
   }, 
   function () {
     $('.twitter-img').css({'-webkit-filter':'invert(50%)'});
-});
+  });
 
 $('.fb-button').hover(
   function () {
@@ -152,7 +180,7 @@ $('.fb-button').hover(
   }, 
   function () {
     $('.fb-img').css({'-webkit-filter':'invert(50%)'});
-});
+  });
 
 $('.google-button').hover(
   function () {
@@ -160,5 +188,5 @@ $('.google-button').hover(
   }, 
   function () {
     $('.google-img').css({'-webkit-filter':'invert(50%)'});
-});
+  });
 
