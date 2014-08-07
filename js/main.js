@@ -144,10 +144,10 @@ $('#signup').click(function(){
 });
 
 // change name input on invite a friend panel
-$name.change(function(){
-  var input = $name.val(); 
-  $('#input_yourname').val(input);
-});
+// $name.change(function(){
+//   var input = $name.val(); 
+//   $('#input_yourname').val(input);
+// });
 
 // when scroll over the invite panel, make the input
 // box for name or friend's phone number focused. 
