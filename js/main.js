@@ -9,13 +9,23 @@ var $phone   = $('#input_phone');
 var $zipcode = $('#input_zip');
 var $alert   = $('#message-alert'); 
 
-// Setup fancybox
-$(document).ready(function() {
-  fancybox();
-  $name.focus();
-});
+function warning(msg) {
+  console.log("Warning");
+  $alert.text(msg);
+}
 
-function fancybox(){
+$(document).ready(function() {
+
+  // Set jumbotron's height to window height
+  var windowHeight  = $(window).height();
+  var windowWidth   = $(window).width();
+  var jumbotronHeight = $('.jumbotron').height();
+  var minWidth    = 1000;
+
+  if(windowHeight > jumbotronHeight && windowWidth > minWidth){
+    $('.jumbotron').height(windowHeight);
+  }
+
   $('.fancybox').fancybox();
 
   $(".video").fancybox({
@@ -27,12 +37,7 @@ function fancybox(){
       media : {}
     }
   });
-}
-
-function warning(msg) {
-  console.log("Warning");
-  $alert.text(msg);
-}
+});
 
 // kill form submit
 $('form').submit(function(e) {
@@ -150,9 +155,9 @@ $(window).scroll(function() {
   var yourName    = $('#input_yourname');
   var friendPhone = $('#input_friendphone');
   var hT          = $('#invite-panel').offset().top,
-      hH          = $('#invite-panel').outerHeight(),
-      wH          = $(window).height(),
-      wS          = $(this).scrollTop();
+  hH          = $('#invite-panel').outerHeight(),
+  wH          = $(window).height(),
+  wS          = $(this).scrollTop();
   
   if (wS > (hT+hH-wH)){
     if(yourName.val().length == 0){
