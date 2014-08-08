@@ -51,68 +51,63 @@ a, a:hover{
 }
 
 .spinner{
-  margin: 50px auto;
-  width: 50px;
-  height: 30px;
-  text-align: center;
-  font-size: 10px;
+	margin: 50px auto;
+	width: 50px;
+	height: 30px;
+	text-align: center;
+	font-size: 10px;
 }
 
 .spinner > div{
-  background-color: #fff;
-  height: 100%;
-  width: 6px;
-  display: inline-block;
+	background-color: #fff;
+  	height: 100%;
+	width: 6px;
+	display: inline-block;
   
-  -webkit-animation: stretchdelay 1.2s infinite ease-in-out;
-  animation: stretchdelay 1.2s infinite ease-in-out;
+	-webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+	animation: stretchdelay 1.2s infinite ease-in-out;
 }
 
 .spinner .rect2{
-  -webkit-animation-delay: -1.1s;
-  animation-delay: -1.1s;
+	-webkit-animation-delay: -1.1s;
+	animation-delay: -1.1s;
 }
 
 .spinner .rect3{
-  -webkit-animation-delay: -1.0s;
-  animation-delay: -1.0s;
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
 }
 
 .spinner .rect4{
-  -webkit-animation-delay: -0.9s;
-  animation-delay: -0.9s;
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
 }
 
 .spinner .rect5{
-  -webkit-animation-delay: -0.8s;
-  animation-delay: -0.8s;
+	-webkit-animation-delay: -0.8s;
+	animation-delay: -0.8s;
 }
 
 @-webkit-keyframes stretchdelay{
-  0%, 40%, 100%{ 
-  	-webkit-transform: scaleY(0.4)
-  }  
-  20%{ 
-  	-webkit-transform: scaleY(1.0) 
-  }
+	0%, 40%, 100%{ 
+		-webkit-transform: scaleY(0.4)
+	}  
+	20%{ 
+		-webkit-transform: scaleY(1.0)
+	}
 }
 
-@keyframes stretchdelay {
-  0%, 40%, 100%{ 
-    transform: scaleY(0.4);
-    -webkit-transform: scaleY(0.4);
-  }  20%{ 
-    transform: scaleY(1.0);
-    -webkit-transform: scaleY(1.0);
-  }
+@keyframes stretchdelay{
+	0%, 40%, 100%{
+		transform: scaleY(0.4);
+		-webkit-transform: scaleY(0.4);
+	} 20%{
+		transform: scaleY(1.0);
+		-webkit-transform: scaleY(1.0);
+	}
 }
 
 /* ------ NAVIGATION ------*/
-/*.nav .container{
-	margin-top: 15px;
-	color: black;	
-}*/
-
 .nav{
 	padding-top: 15px;
 	padding-left: 50px;
@@ -124,7 +119,6 @@ a, a:hover{
 	font-weight: 600;
 	letter-spacing: -1.5px;
 	color: white;
-	/*text-transform: uppercase;*/
 }
 
 .nav ul{
@@ -139,7 +133,6 @@ a, a:hover{
 	padding: 14px 10px;
 	font-size: 14px;
 	font-weight: bold;
-	/*color: gray;*/
 	color: white;
 	font-weight: bold;
 	letter-spacing: 2px;
@@ -150,11 +143,9 @@ a, a:hover{
 
 .jumbotron{
 	width: 100%;
-	/*height: 510px;*/
 	height: 100%;
 	padding: 0px;
 	margin: 0px;
-	/*max-width: 1426px;*/
 	color: black;
 }
 
@@ -163,9 +154,6 @@ a, a:hover{
 	height: inherit;
 	padding: inherit;
 	margin: inherit;
-	/*margin-right: 120px;*/
-	/*margin-top: 0px;
-	margin-bottom: 0px;*/
 }
 
 .jumbotron .backgroud-picture{
@@ -195,7 +183,6 @@ a, a:hover{
 	left: 0;
 	right: 0;
 	z-index: 999;
-	/*width: 100%;*/
 	
 	width: inherit;
 	height: inherit;
@@ -203,55 +190,19 @@ a, a:hover{
 	margin: inherit;
 }
 
-.jumbotron .phone-img{
-	/*position: absolute;*/
-	/*text-align: left;*/
-	/*z-index: 9999;*/
-	/*width: 100%;*/
-	max-height: 510px;
-	/*margin-left: -100px;*/
-	/*width: 100%;
-	min-height: 510px;
-	max-width: 1426px;*/
-}
-
-.jumbotron .phone-img img{
-	position: absolute;
-	width: 400px;
-	bottom: 0;
-	left: 0;
-	margin-left: 60px;
-}
-
-/*.jumbotron .phone-img img{
-	bottom: 0;
-	left: 0;
-	width: 450px;
-	margin-left: -80px;
-	position: absolute;
-}*/
-
 .jumbotron .main{
-	/*margin-right: 200px;*/
 	text-align: center;
-	/*margin-left: 35%;*/
 	height: auto;
-	/*padding-right: 24px;*/
-	/*margin-right: 750px;*/
 	margin-left: 110px;
-	/*padding-top: 30px;*/
 	padding-top: 2%;
 }
 
 .jumbotron .description h1{
-	/*color: #38a0f4;*/
 	color: black;
 	font-weight: 700;
 	line-height: 1;
 	letter-spacing: -1px;
 	font-size: 48px;
-/*	padding-top: 30px;
-	padding-top: 10%;*/
 	margin-bottom: 25px;
 }
 
@@ -272,9 +223,7 @@ a, a:hover{
 	text-decoration: underline;
 }
 
-
 .jumbotron .signup{
-	/*margin-top: 110px;*/
 	margin-top: 50px;
 	background-color: white;
 	padding: 20px;
@@ -298,7 +247,6 @@ a, a:hover{
 }
 
 .jumbotron .signup .inline .form-control{
-	/*width: 118px;*/
 	width: 133px;
 	display: inline;
 }
@@ -309,7 +257,6 @@ a, a:hover{
 	margin-top: 0px;
 	padding-top: 0px;
 	font-size: 12px;
-	/*min-height: 18px;*/
 	color: red;
 }
 
@@ -343,17 +290,14 @@ a, a:hover{
 	min-height: 550px;
 	overflow: hidden;
 	position: relative;
-	/*margin-top: 80px;*/
 }
 
 .learn-more .row{
 	padding-top: 50px;
 	padding-bottom: 50px;
-	/*text-align: center;*/
 }
 
 .learn-more .featurette{
-	/*margin-left: 100px;*/
 	margin-bottom: 50px;
 }
 
@@ -365,13 +309,6 @@ a, a:hover{
 
 .learn-more p{
 	font-size: 20px;
-}
-
-.learn-more .videorette{
-	/*width: 100%;*/
-	/*margin-right: 0;
-	margin-left: 0;
-	text-align: center;*/
 }
 
 .learn-more img{
@@ -409,11 +346,7 @@ a, a:hover{
 }
 
 .features .phone-img img{
-	/*position: absolute;*/
 	width: 500px;
-	/*bottom: 0;
-	left: 0;*/
-	/*margin-left: 60px;*/
 }
 
 .features .lead{
@@ -423,10 +356,7 @@ a, a:hover{
 }
 
 /* ------ INVITE PANEL ------*/
-
 .invite{
-	/*background: radial-gradient(#36414e, #253241);*/
-	/*background-color: #5a5a5a;*/
 	background-color: #f3f3f3;
 	margin-top: 120px;
 	text-align: center;
@@ -444,7 +374,6 @@ a, a:hover{
 }
 	
 .invite .inline .form-control{
-	/*width: 118px;*/
 	width: 180px;
 	display: inline;
 	margin-right: 5px;
@@ -461,7 +390,6 @@ a, a:hover{
 }
 
 /* ------ MARKETING PANEL ------*/
-
 .marketing{
 	height: 700px;
 }
@@ -477,14 +405,12 @@ a, a:hover{
 .marketing .featurette{
 	padding-left: 100px;
 	padding-right: 100px;
-	
 }
 
 .marketing .featurette-heading {
 	font-weight: 300;
 	line-height: 1.2;
 	letter-spacing: 1.5px;
-	
 }
 
 .marketing .btn{
@@ -502,7 +428,6 @@ a, a:hover{
 }
 
 /* ------ SHARE PANEL ------*/
-
 .share{
 	background-color: #f3f3f3;
 	height: 280px;
@@ -525,7 +450,6 @@ a, a:hover{
 	border-radius: 5px;
 	color: #919191;
 	border: 1px solid #dedcd7;
-	/*color: gray;*/
 }
 
 .share .twitter-button:hover{
@@ -535,7 +459,6 @@ a, a:hover{
 .share .fb-button:hover{
 	background-color: #3b5998;
 }
-
 
 .share .google-button:hover{
 	background-color: #dd4b39;
@@ -547,7 +470,6 @@ a, a:hover{
 }
 
 .share p{
-	/*color: gray;*/
 	margin: 12px 0px;
 }
 
@@ -560,9 +482,7 @@ a, a:hover{
 	filter: invert(50%);
 }
 
-
 /* ------ FOOTER ------*/
-
 footer{
 	margin-left: 40px;
 	margin-right: 40px;
@@ -574,7 +494,6 @@ footer .featurette-divider{
 	margin-top: 0px;
 	margin-bottom: 30px;
 }
-
 
 footer h5{
 	padding-top: 60px;	
