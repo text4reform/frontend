@@ -510,3 +510,8 @@ footer p{
 	padding-top: 10px;
 }
 
+footer a, footer a:hover{
+	color: #5a5a5a;
+}
+
+
