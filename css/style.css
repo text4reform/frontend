@@ -139,6 +139,32 @@ a, a:hover{
 	text-transform: uppercase;
 }
 
+.navbar-default{
+	background-color: white;
+	border-color: transparent;
+	opacity: .95;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+	border-bottom: none;
+}
+
+#nav-fixed{
+	padding-top: 10px;
+	display: none;
+}
+
+#nav-fixed p{
+	font-size: 28px;
+	color: #5a5a5a;
+}
+
+#nav-fixed ul{
+	margin-top: 16px;
+}
+
+#nav-fixed li a{
+	color: #5a5a5a;
+}
+
 /* ------ JUMBOTRON PANEL ------*/
 
 .jumbotron{
@@ -163,7 +189,7 @@ a, a:hover{
 	z-index: 1;
 
 	display: block;
-	background-image: url('http://williambeem.com/wp-content/uploads/2012/05/Capitol-Reflection.jpg');
+	background-image: url('http://utdallas.edu/~juniavalente/t4r/img/Capitol-Reflection.jpg');
 	background-repeat: no-repeat;
 
 	background-size: cover;

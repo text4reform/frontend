@@ -17,10 +17,10 @@ function warning(msg) {
 $(document).ready(function() {
 
   // Set jumbotron's height to window height
-  var windowHeight  = $(window).height();
-  var windowWidth   = $(window).width();
+  var windowHeight    = $(window).height();
+  var windowWidth     = $(window).width();
   var jumbotronHeight = $('.jumbotron').height();
-  var minWidth    = 1000;
+  var minWidth        = 1000;
 
   if(windowHeight > jumbotronHeight && windowWidth > minWidth){
     $('.jumbotron').height(windowHeight);
@@ -155,9 +155,9 @@ $(window).scroll(function() {
   var yourName    = $('#input_yourname');
   var friendPhone = $('#input_friendphone');
   var hT          = $('#invite-panel').offset().top,
-  hH          = $('#invite-panel').outerHeight(),
-  wH          = $(window).height(),
-  wS          = $(this).scrollTop();
+      hH          = $('#invite-panel').outerHeight(),
+      wH          = $(window).height(),
+      wS          = $(this).scrollTop();
   
   if (wS > (hT+hH-wH)){
     if(yourName.val().length == 0){
@@ -167,6 +167,21 @@ $(window).scroll(function() {
     }
   }
 
+});
+
+jQuery(function($){
+  var starting_position = $(window).height();
+
+  $(window).scroll(function() {
+    var yPos = ($(window).scrollTop());
+    // show sticky menu after these many (starting_position) pixels have been 
+    // scrolled down from the top and only when viewport width is greater than 500px.
+    if(yPos > starting_position && window.innerWidth > 500){ 
+      $("#nav-fixed").fadeIn();
+    }else{
+      $("#nav-fixed").fadeOut();
+    }
+  });
 });
 
 // change icon color when hover over. 
