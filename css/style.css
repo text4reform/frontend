@@ -5,6 +5,7 @@ html, body {
 	font-weight: normal;
 	padding-bottom: 0px;
 	/*height: 100%;*/
+	font-size: 100%;
 }
 
 .blue{
@@ -47,7 +48,7 @@ a, a:hover{
 	top: 50%;
 	background-repeat: no-repeat;
 	background-position: center;
-	margin: -85px 0 0 -85px;
+	margin: -75px 0 0 -75px;
 }
 
 .spinner{
@@ -367,12 +368,15 @@ a, a:hover{
 }
 
 /* ------ FEATURES PANEL ------*/
+
 .features .phone-img{
 	max-height: auto;
+	margin-top: 10px;
 }
 
 .features .phone-img img{
-	width: 500px;
+/*	width: 500px;*/
+	width: 85%;
 }
 
 .features .lead{
@@ -380,6 +384,7 @@ a, a:hover{
 	font-size: 20px;
 	letter-spacing: 1.2px;
 }
+
 
 /* ------ INVITE PANEL ------*/
 .invite{
@@ -429,8 +434,10 @@ a, a:hover{
 }
 
 .marketing .featurette{
-	padding-left: 100px;
-	padding-right: 100px;
+	/*padding-left: 100px;
+	padding-right: 100px;*/
+	padding-left: 10%;
+	padding-right: 10%;
 }
 
 .marketing .featurette-heading {
@@ -539,5 +546,121 @@ footer p{
 footer a, footer a:hover{
 	color: #5a5a5a;
 }
+
+
+/* ------ Media Queries ------*/
+
+/* Features */
+@media (min-width: 756px) and (max-width: 994px) {
+	.col-md-6 {
+		width: 50%;
+	}
+}
+
+@media (max-width: 756px) {
+	.features .phone-img img{
+		width: 80%;
+	}
+}
+
+
+/* Invite */
+@media (min-width: 454px) and (max-width: 565px){
+	.invite{
+		/*background-color: gray;*/
+	}
+
+	.invite .form-group input:nth-child(2){
+		margin-right: 0px;
+	}	
+
+	#invite{
+		width: 372px;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 454px){
+	.invite{
+		/*background-color: gray;*/
+		height: 100%;
+	}
+
+	.invite .row{
+		width: 100%;
+	}
+
+	.invite .inline .form-control{
+		margin-right: 0px;
+	}
+
+	.invite .inline .form-control{
+		width: 85%;
+		margin-top: 5px;
+	}
+
+	#invite{
+		width: 85%;
+		margin-top: 10px;
+		margin-bottom: 20px;
+	}	
+}
+
+/* Share */
+@media (min-width: 713px) and (max-width: 999px){
+
+	.share{
+		height: 100%;
+	}
+
+	.share .row{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.share .share-button{
+		/*display: block;*/
+		margin-bottom: 0px;
+		margin-top: 20px;
+		/*margin-left: 0px;*/
+	}
+
+	.share .share-button:first-child{
+		margin-top: 30px;
+	}
+
+	.share .share-button:last-child{
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 713px){
+
+	.share{
+		height: 100%;
+	}
+
+	.share .share-button{
+		/*display: block;*/
+		margin-bottom: 0px;
+		margin-top: 20px;
+		margin-left: 0px;
+		width: 230px;
+	}
+
+	.share .share-button:first-child{
+		margin-top: 30px;
+	}
+
+	.share .share-button:last-child{
+		margin-bottom: 30px;
+	}
+
+}
+
+
+
+
+
 
 
