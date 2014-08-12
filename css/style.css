@@ -532,10 +532,18 @@ footer h5{
 	padding-top: 60px;	
 }
 
+footer .sponsors a{
+	margin-right: 30px;
+}
+
+footer .sponsors a:last-child{
+	margin-right: 0px;
+}
+
 footer img{
 	height: 40px;
 	padding-top: 10px;
-	padding-left: 40px;
+	/*margin-left: 40px;*/
 }
 
 footer p{
@@ -658,6 +666,115 @@ footer a, footer a:hover{
 
 }
 
+/* Footer */
+@media (min-width: 940px) and (max-width: 1120px){
+	footer h5{
+		font-size: 14px;
+	}
+
+	footer p{
+		margin-bottom: 20px;
+		padding-top: 30px;
+		font-size: 14px;
+	}
+}
+
+@media (min-width: 715px) and (max-width: 940px){
+	footer h5{
+		font-size: 14px;
+	}
+
+	footer p{
+		margin-bottom: 20px;
+		padding-top: 50px;
+		font-size: 12px;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 715px){
+	footer{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	footer h5{
+		font-size: 14px;
+	}
+
+	footer p{
+		margin-bottom: 20px;
+		padding-top: 50px;
+		font-size: 12px;
+	}
+
+	footer a{
+		width: 30%;
+	}
+}
+
+@media (min-width: 500px) and (max-width: 529px){
+	footer{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	footer h5{
+		font-size: 16px;
+		padding-bottom: 20px;
+	}
+
+	footer p{
+		margin-bottom: 20px;
+		padding-top: 60px;
+		font-size: 12px;
+	}
+
+	footer img{
+		height: 60px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	footer a{
+		width: 30%;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 500px){
+	footer{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	footer h5{
+		font-size: 16px;
+		padding-bottom: 20px;
+	}
+
+	footer p{
+		margin-bottom: 20px;
+		padding-top: 60px;
+		font-size: 10px;
+	}
+
+	footer img{
+		height: 60px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
+
+	footer a{
+		width: 30%;
+	}
+
+	/*footer .pull-left, footer .pull-right{
+		float: none !important;
+	}*/
+}
 
 
 
