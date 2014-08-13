@@ -291,7 +291,7 @@ a, a:hover{
 	margin-top: 0px;
 	padding-top: 0px;
 	font-size: 12px;
-	color: red;
+	/*color: red;*/
 }
 
 .jumbotron .signup .btn{
@@ -329,6 +329,7 @@ a, a:hover{
 .learn-more .row{
 	padding-top: 50px;
 	padding-bottom: 50px;
+	padding-right: 15px;
 }
 
 .learn-more .featurette{
@@ -723,13 +724,13 @@ footer a, footer a:hover{
 		/*height: 80%;*/
 		padding-left: 0px;
 		padding-right: 0px;
-		background: rgba(0, 0, 0, .3);
+		background: rgba(0, 0, 0, .25);
 	}
 
 	.jumbotron .backgroud-picture{
 		/*background-image: url('http://text4reform.org/img/capitol-bw.jpg');*/
 		/*background-position: -50px 0px;*/
-		background-position: -580px 0px;
+		background-position: -600px 0px;
 		background-size: cover;
 		/*background-size: 100%;*/
 		-webkit-filter: none;
@@ -752,21 +753,37 @@ footer a, footer a:hover{
 	}
 
 	.jumbotron .description h1{
-		font-size: 32px;
+		font-size: 28px;
 		letter-spacing: -1.5px;
 		padding-bottom: 15px;
 		margin-top: 0px;
 		margin-bottom: 5px;
+		/*display: none;*/
+	}
+
+	.jumbotron .description h2{
+		color: white;
+		padding-bottom: 0px;
+		letter-spacing: -1px;
+		line-height: 1.5;
+		margin-bottom: 0px;
+		font-size: 32px;
+		display: none;
 	}
 
 	.jumbotron .description p{
 		font-size: 16px;
 		/*padding-bottom: 20%;*/
-		font-weight: bold;
+		font-weight: 300;
+		/*display: none;*/
+	}
+
+	.jumbotron .description a{
+		font-size: 12px;
 	}
 
 	.jumbotron br{
-		display:none;
+		/*display:none;*/
 	}
 
 	.jumbotron .signup{
@@ -789,6 +806,13 @@ footer a, footer a:hover{
 
 	.jumbotron .signup input{
 		height: 45px;
+	}
+
+	.jumbotron .signup .message-alert{
+		font-size: 12px;
+		font-weight: bold;
+		color: white;
+		margin-top: 20px;
 	}
 
 	.jumbotron .signup .btn{
@@ -834,6 +858,26 @@ footer a, footer a:hover{
 		height: 50px;
 		width: 50px;
 	}
+
+	.learn-more .featurette-heading{
+		font-size: 36px;
+	}
+
+	.learn-more p, .features .lead{
+		font-size: 18px;
+	}
+
+	.features .text-muted{
+		display: block;
+	}
+
+	.marketing .featurette{
+		/*padding-left: 100px;
+		padding-right: 100px;*/
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
 }
 
 /* Invite */
