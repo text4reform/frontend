@@ -20,7 +20,7 @@ $(document).ready(function() {
   var windowHeight    = $(window).height();
   var windowWidth     = $(window).width();
   var jumbotronHeight = $('.jumbotron').height();
-  var minWidth        = 1000;
+  var minWidth        = 0;
 
   if(windowHeight > jumbotronHeight && windowWidth > minWidth){
     $('.jumbotron').height(windowHeight);
