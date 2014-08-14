@@ -17,14 +17,14 @@ function warning(msg) {
 $(document).ready(function() {
 
   // Set jumbotron's height to window height
-  var windowHeight    = $(window).height();
-  var windowWidth     = $(window).width();
-  var jumbotronHeight = $('.jumbotron').height();
-  var minWidth        = 0;
+  // var windowHeight    = $(window).height();
+  // var windowWidth     = $(window).width();
+  // var jumbotronHeight = $('.jumbotron').height();
+  // var minWidth        = 0;
 
-  if(windowHeight > jumbotronHeight && windowWidth > minWidth){
-    $('.jumbotron').height(windowHeight);
-  }
+  // if(windowHeight > jumbotronHeight && windowWidth > minWidth){
+  //   $('.jumbotron').height(windowHeight);
+  // }
 
   $('.fancybox').fancybox();
 
@@ -35,6 +35,22 @@ $(document).ready(function() {
     closeEffect : 'none',
     helpers : {
       media : {}
+    }
+  });
+});
+
+jQuery(function($){
+  var starting_position = $(window).height();
+  var minWidth          = 480;
+  
+  $(window).scroll(function() {
+    var yPos = ($(window).scrollTop());
+    // show sticky menu after these many (starting_position) pixels have been 
+    // scrolled down from the top and only when viewport width is greater than 500px.
+    if(yPos > starting_position && window.innerWidth > minWidth){ 
+      $("#nav-fixed").fadeIn();
+    }else{
+      $("#nav-fixed").fadeOut();
     }
   });
 });
@@ -167,21 +183,6 @@ $(window).scroll(function() {
     }
   }
 
-});
-
-jQuery(function($){
-  var starting_position = $(window).height();
-
-  $(window).scroll(function() {
-    var yPos = ($(window).scrollTop());
-    // show sticky menu after these many (starting_position) pixels have been 
-    // scrolled down from the top and only when viewport width is greater than 500px.
-    if(yPos > starting_position && window.innerWidth > 500){ 
-      $("#nav-fixed").fadeIn();
-    }else{
-      $("#nav-fixed").fadeOut();
-    }
-  });
 });
 
 // change icon color when hover over. 
