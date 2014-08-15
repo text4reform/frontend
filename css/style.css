@@ -432,6 +432,10 @@ a, a:hover{
 	background-color: #3276b1;
 }
 
+.invite .message-alert{
+	font-size: 12px;
+}
+
 /* ------ MARKETING PANEL ------*/
 .marketing{
 	height: 700px;
@@ -507,6 +511,16 @@ a, a:hover{
 
 .share .google-button:hover{
 	background-color: #dd4b39;
+}
+
+.share .twitter-button:hover .twitter-img, 
+.share .fb-button:hover .fb-img, 
+.share .google-button:hover .google-img{
+	-webkit-filter: invert(100%);
+	-moz-filter: invert(100%);
+	-o-filter: invert(100%);
+	-ms-filter: invert(100%);
+	filter: invert(100%);
 }
 
 .share a:hover{
