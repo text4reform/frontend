@@ -175,11 +175,19 @@ $(window).scroll(function() {
       wH          = $(window).height(),
       wS          = $(this).scrollTop();
   
-  if (wS > (hT+hH-wH)){
-    if(yourName.val().length == 0){
+  if (wS > (hT+hH-wH) && wS < (hT+hH-wH+400)){
+    if($(yourName).is(":focus") || $(friendPhone).is(":focus")){
+      return;
+    }
+    else if(yourName.val().length == 0){
       $(yourName).focus();
     }else{
       $(friendPhone).focus();
+    }
+  }else{
+    if($(yourName).is(":focus") || $(friendPhone).is(":focus")){
+      $(yourName).blur();
+      $(friendPhone).blur();
     }
   }
 
