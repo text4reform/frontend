@@ -144,6 +144,10 @@ a, a:hover{
 	text-transform: uppercase;
 }
 
+#nav-fixed{
+	display: none;
+}
+
 .navbar-default{
 	background-color: white;
 	border-color: transparent;
@@ -152,21 +156,20 @@ a, a:hover{
 	border-bottom: none;
 }
 
-#nav-fixed{
+.navbar-fixed-top{
 	padding-top: 10px;
-	display: none;
 }
 
-#nav-fixed p{
+.navbar-fixed-top p{
 	font-size: 28px;
 	color: #5a5a5a;
 }
 
-#nav-fixed ul{
+.navbar-fixed-top ul{
 	margin-top: 16px;
 }
 
-#nav-fixed li a{
+.navbar-fixed-top li a{
 	color: #5a5a5a;
 }
 
@@ -521,11 +524,13 @@ a, a:hover{
 	-o-filter: invert(100%);
 	-ms-filter: invert(100%);
 	filter: invert(100%);
+	transition: all 500ms ease;
 }
 
 .share a:hover{
 	text-decoration: none;
 	color: white;
+	transition: all 500ms ease;
 }
 
 .share p{
