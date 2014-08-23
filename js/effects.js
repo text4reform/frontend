@@ -39,14 +39,19 @@ $('a[href*=#]').click(function() {
 // When scroll over the invite panel, make the input
 // box for name or friend's phone number focused. 
 $(window).scroll(function() {
+  if(null == $('#invite-panel').offset()){
+    return;
+  }
+
   var yourName    = $('#input_yourname');
   var friendPhone = $('#input_friendphone');
   var inviteBtn   = $('#invite');
   var invitePanel = $('#invite-panel');
+
   var hT          = invitePanel.offset().top,
-  hH          = invitePanel.outerHeight(),
-  wH          = $(window).height(),
-  wS          = $(this).scrollTop();
+      hH          = invitePanel.outerHeight(),
+      wH          = $(window).height(),
+      wS          = $(this).scrollTop();
   
   var isFocus = $(yourName).is(":focus") || $(friendPhone).is(":focus");
   var isPosition = wS > (hT+hH-wH) && wS < (hT+hH-wH+400);
