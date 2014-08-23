@@ -1,19 +1,51 @@
+
+.vision{
+	margin-top: 100px;
+	height: 100%;
+}
+
 .member{
 	margin-top: 10px;
 	height: auto;
 	text-align: center;
-	color: black;
+	/*color: black;*/
 	margin-bottom: 40px;
+}
+
+.member h3{
+	font-size: 26px;
+	font-weight: 100;
+	color: #333;
+	line-height: 30px;
+	margin-bottom: 20px;
+}
+
+.member h5{
+	margin-bottom: 20px;
+}
+
+.member p{
+	padding-left: 15px;
+	padding-right: 15px;
+	height: 60px;
+	font-family: "Helvetica";
+	font-size: 18px;
+	line-height: 25px;
+}
+
+.member .lead{
+	font-size: 16px;
 }
 
 .member .row{
 	margin-left: 0px;
 	margin-right: 0px;
 	margin-top: 40px;
+	height: 500px;
 }
 
 .member img{
-	width: 260px;
+	width: 210px;
 	padding-bottom: 10px;
 	border: 1px solid #eee;
 	padding: 8px;
@@ -45,19 +77,19 @@
 	width: 100% ! important;
 }
 
-.member a.fb:hover{
+.member a.fb:hover, .member a.fb{
 	background: #3b5998;
 }
 
-.member a.linkedin:hover{
+.member a.linkedin:hover, .member a.linkedin{
 	background: #0976b4;
 }
 
-.member a.twitter:hover{
+.member a.twitter:hover, .member a.twitter{
 	background: #55acee;
 }
 
-.member a.google:hover{
+.member a.google:hover, .member a.google{
 	background: #dd4b39;
 }
 
@@ -71,6 +103,23 @@
 }
 
 .member .fa{
+	/*color: #919191;*/
+	color: white;
+}
+
+.member .fa-map-marker{
 	color: #919191;
 }
 
+.contactus{
+	background-color: #f3f3f3;
+	height: 400px;
+	text-align: center;
+	margin-bottom: 80px;
+	margin-top: 80px;
+}
+
+.contactus .featurette-heading{
+	margin-top: 30px;
+	padding-bottom: 20px;
+}
