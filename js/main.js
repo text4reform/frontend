@@ -1,4 +1,4 @@
-var server        = '162.209.126.106:1234';
+var server        = '192.241.252.139:1234';
 
 // regular expression to validate phone and zip
 var phoneRegexp   = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
