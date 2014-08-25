@@ -311,6 +311,27 @@ a, a:hover{
 	background-color: #3276b1;
 }
 
+.jumbotron .social{
+	position: absolute;
+	height: auto;
+	width: 100%;
+	text-align: left;
+	bottom: 3%;
+	left: 3%;
+	vertical-align: bottom;
+	color: white;
+}
+
+.jumbotron .social h5{
+	font-size: 18px;
+}
+
+.jumbotron .fa{
+	color: white;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
 /*.jumbotron .arrow-down{
 	position: absolute;
 	height: auto;
@@ -556,6 +577,7 @@ footer{
 	margin-right: 40px;
 	text-align: center;
 	margin-bottom: 20px;
+	font-size: 12px;
 }
 
 footer .featurette-divider{
