@@ -136,3 +136,31 @@
 	margin-top: 30px;
 	/*padding-bottom: 20px;*/
 }
+
+.contactus .left{
+	/*font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+	text-align: left;
+	margin-top: 40px;
+}
+
+.contactus .lead{
+	color: #424b51;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.contactus .text-muted{
+	color:#838886;
+	font-size: 12px;
+	letter-spacing: -.5px;
+}
+
+.contactus .email{
+	font-size: 12px;
+	font-weight: 500;
+	letter-spacing: .8px;
+}
+
+.contactus .social{
+	display: inline;
+}
