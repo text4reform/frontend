@@ -102,6 +102,10 @@
 	background: #dd4b39;
 }
 
+.member a.github:hover, .member a.github{
+	background: #4183c4;
+}
+
 .member a:hover .fa{
 	color: #fff;
 	transition: all 500ms ease;

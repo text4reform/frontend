@@ -28,6 +28,10 @@ a, a:hover{
 	background: rgba(0, 0, 0, .85);
 }
 
+.small{
+	font-size: 12px;
+}
+
 #fancybox-wrap{
 	position: absolute;
 	z-index: 9999;
