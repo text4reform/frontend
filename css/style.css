@@ -317,7 +317,7 @@ a, a:hover{
 	width: 100%;
 	text-align: left;
 	bottom: 3%;
-	left: 3%;
+	padding-left: 3%;
 	vertical-align: bottom;
 	color: white;
 }
@@ -450,7 +450,7 @@ a, a:hover{
 	margin-right: 5px;
 }
 
-.invite .btn{
+.btn{
 	width: 100px;
 	background-color: #38a0f4;
 	margin-top: -4px;
@@ -927,6 +927,21 @@ footer a, footer a:hover{
 	.jumbotron #input_phone{
 		/*margin-bottom: 10px;*/
 		/*padding-right: 4%;*/
+	}
+
+	.jumbotron .social{	/*
+		bottom: 10%;
+		padding-left: 10%;*/
+	}
+
+	.jumbotron .social h5{
+		font-size: 20px;
+	}
+
+	.jumbotron .fa{
+		font-size: 30px;
+		margin-left: 5px;
+		margin-right: 5px;
 	}
 }
 
