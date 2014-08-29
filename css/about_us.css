@@ -175,6 +175,11 @@
 	background-color: #3276b1;
 }
 
+.contact input, .contact textarea, .contact .input-group-addon{
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(100, 100, 100, .1);
+	border-color: #999;
+}
+
 footer{
 	margin-top: 0;
 }
@@ -183,30 +188,19 @@ footer p{
 	padding-top: 0px;
 }
 
-/*
-.contactus .left{
-	text-align: left;
-	margin-top: 40px;
+
+@media (min-width: 500px){
+
+	footer{
+		margin-top: 80px;
+	}
 }
 
-.contactus .lead{
-	color: #424b51;
-	font-weight: 600;
-	font-size: 14px;
-}
+@media (min-width: 670px){
 
-.contactus .text-muted{
-	color:#838886;
-	font-size: 12px;
-	letter-spacing: -.5px;
+	form{
+		margin: 0 auto; 
+		width: 550px;
+		text-align: center;
+	}
 }
-
-.contactus .email{
-	font-size: 12px;
-	font-weight: 500;
-	letter-spacing: .8px;
-}
-
-.contactus .social{
-	display: inline;
-}*/
