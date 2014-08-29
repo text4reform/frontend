@@ -5,8 +5,8 @@
 }
 
 .member{
-	margin-top: 80px;
-	margin-bottom: 40px;
+	margin-top: 60px;
+	padding-bottom: 80px;
 	height: auto;
 	/*color: black;*/
 	text-align: center;
@@ -14,6 +14,10 @@
 
 .member .container{
 	height: 100%;
+}
+
+.member .featurette-heading{
+	margin-top: 30px;
 }
 
 .member .col-md-4{
@@ -36,7 +40,7 @@
 .member p{
 	padding-left: 15px;
 	padding-right: 15px;
-	height: 80px;
+	height: 60px;
 	font-family: "Helvetica";
 	font-size: 18px;
 	line-height: 25px;
@@ -49,12 +53,13 @@
 .member .row{
 	margin-left: 0px;
 	margin-right: 0px;
-	margin-top: 40px;
+	/*margin-top: 40px;*/
 	/*height: 500px;*/
 }
 
 .member img{
 	width: 210px;
+	margin-top: 20px;
 	padding-bottom: 10px;
 	border: 1px solid #eee;
 	padding: 8px;
