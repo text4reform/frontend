@@ -138,39 +138,6 @@ $('#invite').click(function() {
   }
 
   showAlert("This feature is under development. Please come back next week.");
-  
-  // change button text to sending...
-  // btn.button('loading');
 
-  // submit name and phone to twilio
-  // $.ajax({
-  //   type: "post",
-  //   dataType: "json",
-  //   url: 'http://' + server + '/textme',
-  //   data: { zip: zipcode, number: phone },
-  //   crossDomain: true,
-  //   timeout: 2000,
-  //   success: function(data) {
-  //     console.log("success: ", data);
-  //     btn.button('reset');
-  //     if (data.exists) {
-  //       warning('We have already texted that number recently.');
-  //       $phone.val('');
-  //       $zipcode.val('');
-  //     } else {
-  //       // clear phone and zip input
-  //       warning('Thanks! We will contact you shortly via text.');
-  //       $phone.val('');
-  //       $zipcode.val('');
-  //     }
-  //   },
-  //   error: function(data) {
-  //     console.log("Error: ", data);
-  //     btn.button('reset')
-  //     // clear phone and zip input
-  //     $phone.val('');
-  //     $zipcode.val('');
-  //     warning('Sorry, we were unable to submit your information this time.');
-  //   }});
   return false; 
 });
