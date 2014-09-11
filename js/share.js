@@ -32,10 +32,3 @@ $('#share-google-plus').click(function(event) {
 
   return false;
 }); 
-
-
-$('#contact').click(function(event) {
-  var url    = "mailto:info@text4reform";
-
-  return false;
-}); 
