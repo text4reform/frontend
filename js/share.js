@@ -5,7 +5,7 @@ var width   = 575,
     opts    = 'status=1' + ',width=' + width  + ',height=' + height + ',top=' + top +',left=' + left;
 
 $('#share-twitter').click(function(event) {
-  var text    = "The time for immigration reform is now! Send a personalized letter to Congress easily via text. More info:",
+  var text    = "I support immigration reform and so should you. Send your personalized letter to Congress via text. #TimeIsNow #CIR"
       type    = "&tw_p=tweetbutton",
       url     = "&url=http%3A%2F%2Ftext4reform.org",
       url     = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) + type + url;
@@ -29,6 +29,13 @@ $('#share-google-plus').click(function(event) {
       url    = "https://plus.google.com/share?url=" + url;
       
   window.open(url, 'google-plus', opts);
+
+  return false;
+}); 
+
+
+$('#contact').click(function(event) {
+  var url    = "mailto:info@text4reform";
 
   return false;
 }); 
