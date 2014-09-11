@@ -141,25 +141,3 @@ $('#invite').click(function() {
 
   return false; 
 });
-
-// Contact us
-$('#contact').click(function(event) {
-  console.log("page: " + window.location.href);
-
-  var name      = $('#contact_name').val(),
-      subject   = "Feedback from " + name,
-      to        = "info@text4reform.org",
-      cc        = $('#contact_email').val(),
-      text      = $('#contact_feedback').val(),
-      url       = "mailto:" + to +"?cc=" + cc + "&subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(text);
-
-  $('#contact_name').val('');
-  $('#contact_feedback').val('');
-  $('#contact_email').val('');
-
-  window.location.href = url;
-
-  // var url    = "mailto:info@text4reform.org";
-
-  return false;
-}); 
