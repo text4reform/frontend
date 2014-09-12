@@ -15,7 +15,7 @@ $('#contact').click(function(event) {
       $from      =  $('#contact_email'),
       $comment   =  $('#contact_feedback');
   
-  var subject   = ($name.val() ? "Feedback from " + $name.val() : "Feedback on Text4Teform"),
+  var subject   = ($name.val() ? "Feedback from " + $name.val() : "Feedback on Text4Reform"),
       cc        = $from.val(),
       text      = $comment.val(),
       url       = "mailto:" + email +"?cc=" + cc + "&subject=" + encodeURIComponent(subject) 
