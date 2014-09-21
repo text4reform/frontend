@@ -239,10 +239,10 @@ a, a:hover{
 
 .jumbotron .description h1{
 	color: black;
-	font-weight: 700;
+	/*font-weight: 700;*/
 	line-height: 1;
 	letter-spacing: -1px;
-	font-size: 48px;
+	font-size: 38px;
 	margin-bottom: 25px;
 }
 

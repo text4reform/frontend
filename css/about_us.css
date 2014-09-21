@@ -1,18 +1,61 @@
+.vision, .our-story{
+	margin-top: 115px;
+	line-height: 35px;
+	margin-bottom: 0px;
+}
 
-.vision{
+.vision .lead, .our-story .lead{
+	font-size: 40px;
+}
+
+.vision .normal-text{
+	font-size: 20px;
+	font-weight: 200;
+}
+
+.our-story p{
+	margin-left: 70px;
+	margin-right: 20px;
+	margin-bottom: 20px;	
+}
+
+.our-story .normal-text{
+	font-size: 17px;
+	font-weight: 200;
+	letter-spacing: -.8px;
+}
+
+.our-story img{
+	float: right;
+	width: 350px;
+	margin-right: 50px;
+	margin-top: 20px;
+	padding-left: 25px;
+}
+
+.story{
 	/*background-color: #f3f3f3;*/
-	margin-top: 150px;
+	/*margin-top: 150px;*/
 	/*height: 100%;*/
 	padding: 20px;
 	padding-bottom: 80px;
 	text-align: center;
+	position: relative;
 }
 
-.vision .lead{
-	font-size: 18px;
+.story .lead{
+	font-size: 17px;
+	/*line-height: 25px;
+	letter-spacing: 1.1px;*/
 	font-weight: 200;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	padding-top: 10px;
+}
+
+.story img{
+	position: absolute;
+	right: 0;
+	margin-top: 55%;
 }
 
 .member{
@@ -25,6 +68,11 @@
 
 .member .container{
 	height: 100%;
+}
+
+.member .featurette-divider{
+	margin-bottom: 30px;
+	margin-top: 60px;
 }
 
 .member .featurette-heading{
