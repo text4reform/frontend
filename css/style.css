@@ -209,11 +209,11 @@ a, a:hover{
 	padding: inherit;
 	margin: inherit;
 
-	/*-webkit-filter: blur(0px) opacity(.9) contrast(1) grayscale(0);
+	-webkit-filter: blur(0px) opacity(.9) contrast(1) grayscale(0);
 	-moz-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
 	-o-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
 	-ms-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
-	filter: blur(0px) opacity(1) contrast(1) grayscale(0);*/
+	filter: blur(0px) opacity(1) contrast(1) grayscale(0);
 }
 
 .jumbotron .row{
@@ -238,17 +238,19 @@ a, a:hover{
 }
 
 .jumbotron .description h1{
-	color: black;
+	color: dark-gray;
 	/*font-weight: 700;*/
 	line-height: 1;
 	letter-spacing: -1px;
-	font-size: 38px;
+	font-size: 40px;
 	margin-bottom: 25px;
 }
 
 .jumbotron .description p{
 	font-weight: 300;
 	font-size: 20px;
+	color: black;
+	/*font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;*/
 }
 
 .jumbotron .description a{
@@ -261,6 +263,15 @@ a, a:hover{
 .jumbotron .description a:hover{
 	color: #38a0f4;
 	text-decoration: underline;
+}
+
+
+.jumbotron .together{
+	letter-spacing: -0px;
+	font-size: 12px;
+	/*color: #0084B4;*/
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .jumbotron .signup{
@@ -276,6 +287,8 @@ a, a:hover{
 
 .jumbotron .signup p{
 	font-size: 14px;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.6);
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 .jumbotron .signup strong{
@@ -840,7 +853,7 @@ footer a, footer a:hover{
 	}
 
 	.jumbotron .description h1{
-		font-size: 30px;
+		font-size: 25px;
 		letter-spacing: -1.5px;
 		padding-top: 5px;
 		/*padding-bottom: 15px;*/
