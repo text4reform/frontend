@@ -37,6 +37,11 @@ a, a:hover{
 	z-index: 9999;
 }
 
+.row {
+	margin-right: 0px; 
+	margin-left: 0px; 
+}
+
 /* ------ PAGE LOADING ------*/
 .preloader{
 	position: fixed;
@@ -1026,6 +1031,10 @@ footer a, footer a:hover{
 		background: rgba(0, 0, 0, .3);
 	}
 
+	.jumbotron p {
+		margin-bottom: 0px;
+	}
+
 	.jumbotron .backgroud-picture{
 		/*background-image: url('http://text4reform.org/img/capitol-bw.jpg');*/
 		/*background-position: -50px 0px;*/
@@ -1148,6 +1157,17 @@ footer a, footer a:hover{
 		/*margin-bottom: 10px;*/
 		/*padding-right: 4%;*/
 	}
+
+	.jumbotron .fa{
+		font-size: 20px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	.learn-more .play-btn {
+		top: 35%;
+		left: 45%;
+	}
 }
 
 /* Features */
@@ -1173,6 +1193,14 @@ footer a, footer a:hover{
 }
 
 @media (max-width: 756px) {
+
+	h1{
+		font-size: 30px;
+	}
+
+	h2{
+		font-size: 25px;	
+	}
 	
 	.navbar-fixed-top{
 		position: fixed ! important;
@@ -1193,7 +1221,7 @@ footer a, footer a:hover{
 	}
 
 	.learn-more .featurette-heading{
-		font-size: 36px;
+		font-size: 30px;
 	}
 
 	.learn-more p, .features .lead{
@@ -1209,6 +1237,11 @@ footer a, footer a:hover{
 		padding-right: 100px;*/
 		padding-left: 10px;
 		padding-right: 10px;
+	}
+
+	.marketing{
+		padding-left: 0px;
+		padding-right: 0px;
 	}
 
 	.learn-more{
@@ -1404,7 +1437,7 @@ footer a, footer a:hover{
 	}
 
 	footer h5{
-		font-size: 0.95em; /*15px;*/
+		font-size: 0.85em; /*15px;*/
 		padding-bottom: 20px;
 		color: #5a5a5a;
 	}

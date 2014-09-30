@@ -265,3 +265,52 @@ footer p{
 		text-align: center;
 	}
 }
+
+@media (max-width: 652px){
+
+	.vision .normal-text {
+		font-size: 16px;
+	}
+
+	.vision p{
+		margin-bottom: 15px;
+	}
+
+	.our-story .normal-text{
+		font-size: 14px;
+	}
+
+	.our-story{
+		margin-top: 15px;
+	}
+
+	.our-story p{
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+
+	.our-story .container{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	.our-story img {
+		margin-right: 0;
+		margin-left: 0;
+		margin-bottom: 20px;
+		padding-left: 0px;
+		width: 100%;
+	}
+
+	.member br{
+		display: none;
+	}
+
+	.member p{
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.featurette-divider {
+		margin: 50px 0;
+	}
+}
