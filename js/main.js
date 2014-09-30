@@ -137,7 +137,32 @@ $('#invite').click(function() {
     phone = result[1] + result[2] + result[3];
   }
 
-  showAlert("This feature is under development. Please come back next week.");
+  // showAlert("This feature is under development. Please come back next week.");
 
+  $.ajax({
+      type: "post",
+      dataType: "json",
+      url: 'http://' + server + '/textme',
+      data: { friend: name, number: phone },
+      crossDomain: true,
+      timeout: 2000,
+      success: function(data) {
+        console.log("success: ", data);
+        btn.button('reset');
+        // clear phone and zip input  
+        showAlert("Success!");
+        $phone.val('');
+        $name.val('');
+      },
+      error: function(data) {
+        console.log("Error: ", data);
+        btn.button('reset')
+        // clear phone and zip input
+        $phone.val('');
+        $name.val('');
+        showAlert('Sorry, an error occurred.');
+      }
+  });
+  
   return false; 
 });
