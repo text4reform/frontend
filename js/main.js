@@ -1,4 +1,4 @@
-var server     = '192.241.252.139:1234';
+var server        = '192.241.252.139:1234';
 
 // regular expression to validate phone and zip
 var phoneRegexp   = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
@@ -154,7 +154,10 @@ $('#invite').click(function() {
     phone = result[1] + result[2] + result[3];
   }
 
-  showAlert("This feature is under development. Please come back next week.");
+  // showAlert("This feature is under development. Please come back next week.");
+
+  // change button text to sending...
+  btn.button('loading');
 
   $.ajax({
       type: "post",
@@ -167,7 +170,7 @@ $('#invite').click(function() {
         console.log("success: ", data);
         btn.button('reset');
         // clear phone and zip input  
-        showAlert("Success!");
+        showAlert("Thank you for making a difference today! Invite more of your friends!");
         $phone.val('');
         $name.val('');
       },
@@ -177,9 +180,9 @@ $('#invite').click(function() {
         // clear phone and zip input
         $phone.val('');
         $name.val('');
-        showAlert('Sorry, an error occurred.');
+        showAlert('Sorry, an error occurred. Please try again later.');
       }
   });
   
   return false; 
-});
+}
