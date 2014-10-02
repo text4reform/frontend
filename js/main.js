@@ -18,7 +18,7 @@ var $inviteAlert = $('#invite-message-alert');
 
 // Change warning message
 function warning(msg) {
-  console.log("Warning");
+  // console.log("Warning");
   $alert.text(msg);
 }
 
@@ -36,7 +36,7 @@ $('#submit').click(function() {
   var phone     = $phone.val();
   var zipcode   = $zipcode.val();
 
-  console.log("talk to twilio");
+  // console.log("talk to twilio");
 
   // validate name
   var result = nameRegexp.exec(name);
@@ -45,39 +45,39 @@ $('#submit').click(function() {
     warning('Whoops, invalid name.');
     return false;
   }else{
-    console.log("success name");
+    // console.log("success name");
     name = result[0];
   }
 
   // validate phone
   var result = phoneRegexp.exec(phone);
   if(!result){
-    console.log("fail phone");
+    // console.log("fail phone");
     $phone.val('').focus();
     // $zipcode.val('');
     warning('Whoops, invalid phone number.');
     return false;
   }else{
-    console.log("success phone");
+    // console.log("success phone");
     phone = result[1] + result[2] + result[3];
   }
 
   // validate zip
   result = zipCodeRegexp.exec(zipcode);
   if(!result){
-    console.log("fail zip");
+    // console.log("fail zip");
     $zipcode.val('').focus();
     warning('Whoops, invalid zip code.');
     return false;
   }else{
-    console.log("success zip");
+    // console.log("success zip");
     zipcode = result[1];
   }
   
   // change button text to sending...
   btn.button('loading');
 
-  console.log("name: " +name);
+  // console.log("name: " +name);
 
   // submit phone and zip to twilio
   $.ajax({
@@ -88,7 +88,7 @@ $('#submit').click(function() {
     crossDomain: true,
     timeout: 2000,
     success: function(data) {
-      console.log("success: ", data);
+      // console.log("success: ", data);
       btn.button('reset');
       if (data.exists) {
         warning('We have already texted that number recently.');
@@ -104,7 +104,7 @@ $('#submit').click(function() {
       }
     },
     error: function(data) {
-      console.log("Error: ", data);
+      // console.log("Error: ", data);
       btn.button('reset')
       // clear phone and zip input
       $phone.val('');
@@ -167,7 +167,7 @@ $('#invite').click(function() {
       crossDomain: true,
       timeout: 2000,
       success: function(data) {
-        console.log("success: ", data);
+        // console.log("success: ", data);
         btn.button('reset');
         // clear phone and zip input  
         showAlert("Thank you for making a difference today! Invite more of your friends!");
@@ -175,7 +175,7 @@ $('#invite').click(function() {
         $name.val('');
       },
       error: function(data) {
-        console.log("Error: ", data);
+        // console.log("Error: ", data);
         btn.button('reset')
         // clear phone and zip input
         $phone.val('');
@@ -183,6 +183,5 @@ $('#invite').click(function() {
         showAlert('Sorry, an error occurred. Please try again later.');
       }
   });
-  
   return false; 
-}
+});
