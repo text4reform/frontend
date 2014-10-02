@@ -1,4 +1,4 @@
-var server        = '192.241.252.139:1234';
+var server     = '192.241.252.139:1234';
 
 // regular expression to validate phone and zip
 var phoneRegexp   = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
@@ -32,17 +32,29 @@ $('form').submit(function(e) {
 // text me
 $('#submit').click(function() {
   var btn       = $(this);
+  var name      = $name.val();
   var phone     = $phone.val();
   var zipcode   = $zipcode.val();
 
   console.log("talk to twilio");
+
+  // validate name
+  var result = nameRegexp.exec(name);
+  if(!result){
+    $name.val('').focus();
+    warning('Whoops, invalid name.');
+    return false;
+  }else{
+    console.log("success name");
+    name = result[0];
+  }
 
   // validate phone
   var result = phoneRegexp.exec(phone);
   if(!result){
     console.log("fail phone");
     $phone.val('').focus();
-    $zipcode.val('');
+    // $zipcode.val('');
     warning('Whoops, invalid phone number.');
     return false;
   }else{
@@ -65,12 +77,14 @@ $('#submit').click(function() {
   // change button text to sending...
   btn.button('loading');
 
+  console.log("name: " +name);
+
   // submit phone and zip to twilio
   $.ajax({
     type: "post",
     dataType: "json",
     url: 'http://' + server + '/textme',
-    data: { zip: zipcode, number: phone },
+    data: { zip: zipcode, number: phone, name: name },
     crossDomain: true,
     timeout: 2000,
     success: function(data) {
@@ -80,11 +94,13 @@ $('#submit').click(function() {
         warning('We have already texted that number recently.');
         $phone.val('');
         $zipcode.val('');
+        $name.val('');
       } else {
         // clear phone and zip input
         warning('Thanks! We will contact you shortly via text.');
         $phone.val('');
         $zipcode.val('');
+        $name.val('');
       }
     },
     error: function(data) {
@@ -93,6 +109,7 @@ $('#submit').click(function() {
       // clear phone and zip input
       $phone.val('');
       $zipcode.val('');
+      $name.val('');
       warning('Sorry, we were unable to submit your information this time.');
     }});
   return false; 
@@ -139,6 +156,7 @@ $('#invite').click(function() {
 
   showAlert("This feature is under development. Please come back next week.");
 
+<<<<<<< HEAD
   // $.ajax({
   //     type: "post",
   //     dataType: "json",
@@ -163,6 +181,32 @@ $('#invite').click(function() {
   //       showAlert('Sorry, an error occurred.');
   //     }
   // });
+=======
+  $.ajax({
+      type: "post",
+      dataType: "json",
+      url: 'http://' + server + '/textme',
+      data: { friend: name, number: phone},
+      crossDomain: true,
+      timeout: 2000,
+      success: function(data) {
+        console.log("success: ", data);
+        btn.button('reset');
+        // clear phone and zip input  
+        showAlert("Success!");
+        $phone.val('');
+        $name.val('');
+      },
+      error: function(data) {
+        console.log("Error: ", data);
+        btn.button('reset')
+        // clear phone and zip input
+        $phone.val('');
+        $name.val('');
+        showAlert('Sorry, an error occurred.');
+      }
+  });
+>>>>>>> master
   
   return false; 
 });
