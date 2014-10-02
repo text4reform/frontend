@@ -156,32 +156,6 @@ $('#invite').click(function() {
 
   showAlert("This feature is under development. Please come back next week.");
 
-<<<<<<< HEAD
-  // $.ajax({
-  //     type: "post",
-  //     dataType: "json",
-  //     url: 'http://' + server + '/textme',
-  //     data: { friend: name, number: phone},
-  //     crossDomain: true,
-  //     timeout: 2000,
-  //     success: function(data) {
-  //       console.log("success: ", data);
-  //       btn.button('reset');
-  //       // clear phone and zip input  
-  //       showAlert("Success!");
-  //       $phone.val('');
-  //       $name.val('');
-  //     },
-  //     error: function(data) {
-  //       console.log("Error: ", data);
-  //       btn.button('reset')
-  //       // clear phone and zip input
-  //       $phone.val('');
-  //       $name.val('');
-  //       showAlert('Sorry, an error occurred.');
-  //     }
-  // });
-=======
   $.ajax({
       type: "post",
       dataType: "json",
@@ -206,7 +180,6 @@ $('#invite').click(function() {
         showAlert('Sorry, an error occurred.');
       }
   });
->>>>>>> master
   
   return false; 
 });
