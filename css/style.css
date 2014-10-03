@@ -206,7 +206,8 @@ a, a:hover{
 	z-index: 1;
 
 	display: block;
-	background-image: url('http://i.huffpost.com/gen/1396126/thumbs/o-CAPITOL-facebook.jpg');
+	background-image: url('http://text4reform.github.io/frontend/img/capitol-sm.jpg');
+	/*background-image: url('http://i.huffpost.com/gen/1396126/thumbs/o-CAPITOL-facebook.jpg');*/
 	background-repeat: no-repeat;
 
 	background-size: cover;
