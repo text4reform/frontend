@@ -170,16 +170,16 @@ $('#invite').click(function() {
         // console.log("success: ", data);
         btn.button('reset');
         // clear phone and zip input  
+        $yourName.val('');
+        $friendPhone.val('');
         showAlert("Thank you for making a difference today! Invite more of your friends!");
-        $phone.val('');
-        $name.val('');
       },
       error: function(data) {
         // console.log("Error: ", data);
         btn.button('reset')
         // clear phone and zip input
-        $phone.val('');
-        $name.val('');
+        $yourName.val('');
+        $friendPhone.val('');
         showAlert('Sorry, an error occurred. Please try again later.');
       }
   });
