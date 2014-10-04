@@ -206,8 +206,7 @@ a, a:hover{
 	z-index: 1;
 
 	display: block;
-	background-image: url('http://text4reform.github.io/frontend/img/capitol-sm.jpg');
-	/*background-image: url('http://i.huffpost.com/gen/1396126/thumbs/o-CAPITOL-facebook.jpg');*/
+	background-image: url('http://text4reform.github.io/frontend/img/capitol-text4reform.jpg');
 	background-repeat: no-repeat;
 
 	background-size: cover;
@@ -215,7 +214,7 @@ a, a:hover{
 	padding: inherit;
 	margin: inherit;
 
-	-webkit-filter: blur(0px) opacity(.9) contrast(1) grayscale(0);
+	-webkit-filter: blur(3px) opacity(1) contrast(1) grayscale(0);
 	-moz-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
 	-o-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
 	-ms-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
@@ -334,9 +333,9 @@ a, a:hover{
 	position: absolute;
 	height: auto;
 	width: 100%;
-	text-align: left;
+	text-align: right;
 	bottom: 3%;
-	padding-left: 3%;
+	padding-right: 5%;
 	vertical-align: bottom;
 	color: white;
 }
@@ -347,11 +346,12 @@ a, a:hover{
 
 .jumbotron .fa{
 	color: white;
-	margin-left: 5px;
-	margin-right: 5px;
+	font-size: 25px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
-/*.jumbotron .arrow-down{
+.jumbotron .arrow-down{
 	position: absolute;
 	height: auto;
 	width: 100%;
@@ -363,7 +363,7 @@ a, a:hover{
 .jumbotron .arrow-down p{
 	color: white;
 	font-size: 40px;
-}*/
+}
 
 /* ------ LEARN MORE PANEL ------*/
 
