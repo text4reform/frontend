@@ -366,6 +366,32 @@ a, a:hover{
 	font-size: 40px;
 }
 
+.animated {
+	-webkit-animation-fill-mode: both;
+	-moz-animation-fill-mode: both;
+	-ms-animation-fill-mode: both;
+	-o-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-animation-duration: 7.5s;
+	-moz-animation-duration: 7.5s;
+	-ms-animation-duration: 7.5s;
+	-o-animation-duration: 7.5s;
+	animation-duration: 7.5s;
+}
+.fadeInLeft {
+	-webkit-animation-name: fadeInLeft;
+	-moz-animation-name: fadeInLeft;
+	-o-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+}
+
+.delay {
+	-moz-animation-delay: 7.3s;
+	-o-animation-delay: 7.3s;
+	animation-delay: 7.3s;
+	-webkit-animation-delay: 7.3s;
+}
+
 /* ------ LEARN MORE PANEL ------*/
 
 .learn-more{
