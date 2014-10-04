@@ -338,6 +338,7 @@ a, a:hover{
 	padding-right: 5%;
 	vertical-align: bottom;
 	color: white;
+	z-index: 9999;
 }
 
 .jumbotron .social h5{
