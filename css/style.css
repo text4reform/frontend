@@ -466,7 +466,7 @@ a, a:hover{
 	position: relative;
 	left: 0;
 	right: 0;
-	z-index: 9999;
+	z-index: 999;
 	
 	width: inherit;
 	height: inherit;
@@ -609,7 +609,6 @@ a, a:hover{
 .jumbotron .arrow-down p{
 	color: white;
 	font-size: 40px;
-	z-index: 9999;
 }
 
 
