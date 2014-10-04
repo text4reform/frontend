@@ -266,8 +266,8 @@ a, a:hover{
 }
 
 .jumbotron .description a:hover{
-	color: white;
 	text-decoration: underline;
+	color: white;
 }
 
 
