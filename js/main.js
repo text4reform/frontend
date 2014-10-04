@@ -20,6 +20,19 @@ var $inviteAlert = $('#invite-message-alert');
 function warning(msg) {
   // console.log("Warning");
   $alert.text(msg);
+  $alert.fadeIn();
+  setTimeout(function(){
+    $alert.fadeOut();
+  }, 5000);
+}
+
+
+function showAlert(msg){
+  $inviteAlert.text(msg);
+  $inviteAlert.fadeIn();
+  setTimeout(function(){
+    $inviteAlert.fadeOut();
+  }, 5000);
 }
 
 // kill form submit
@@ -114,14 +127,6 @@ $('#submit').click(function() {
     }});
   return false; 
 });
-
-function showAlert(msg){
-  $inviteAlert.text(msg);
-  $inviteAlert.fadeIn();
-  setTimeout(function(){
-    $inviteAlert.fadeOut();
-  }, 5000);
-}
 
 // Invite a friend
 $('#invite').click(function() {
