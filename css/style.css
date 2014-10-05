@@ -453,7 +453,9 @@ a, a:hover{
 	background-size: cover;
 	height: inherit;
 	padding: inherit;
-	margin: inherit;
+	/*margin: inherit;*/
+	margin: -5px -10px -10px -5px;
+	height: 102%;
 
 	-webkit-filter: blur(3px) opacity(1) contrast(1) grayscale(0);
 	-moz-filter: blur(0px) opacity(1) contrast(1) grayscale(0);
@@ -467,6 +469,8 @@ a, a:hover{
 	left: 0;
 	right: 0;
 	z-index: 999;
+
+	overflow: hidden;
 	
 	width: inherit;
 	height: inherit;
@@ -952,7 +956,7 @@ footer a, footer a:hover{
 	}
 }
 
-@media (min-width: 480px) and (max-width: 575px) { 
+/*@media (min-width: 480px) and (max-width: 575px) { 
 	.jumbotron .nav{
 		padding-top: 10px;
 		padding-left: 0px;
@@ -989,6 +993,7 @@ footer a, footer a:hover{
 
 	.jumbotron .description h1{
 		font-size: 30px;
+		font-family: 'Open Sans', sans-serif;
 	}
 
 	.jumbotron .description p{
@@ -1003,9 +1008,13 @@ footer a, footer a:hover{
 	.jumbotron .signup{
 		margin-top: 30px;
 	}
-}
 
-@media (min-width: 320px) and (max-width: 480px) { 
+	.jumbotron .arrow-down{
+		display: none;
+	}
+}*/
+
+@media (min-width: 320px) and (max-width: 575px) { 
 	body{
 		padding-right: 20px;
 		padding-left: 20px;
@@ -1075,7 +1084,7 @@ footer a, footer a:hover{
 	}
 
 	.jumbotron .backgroud-picture{
-		/*background-image: url('http://text4reform.org/img/capitol-bw.jpg');*/
+		background-image: url('http://text4reform.org/img/capitol-sm.jpg');
 		/*background-position: -50px 0px;*/
 		background-position: -545px 67px;
 		/*background-position: -37.500em 0em;*/
@@ -1115,6 +1124,7 @@ footer a, footer a:hover{
 		/*text-transform: uppercase;*/
 		/*color: black;*/
 		/*display: none;*/
+		font-family: 'Open Sans', sans-serif;
 	}
 
 	.jumbotron .description h2{
@@ -1195,16 +1205,31 @@ footer a, footer a:hover{
 		/*padding-right: 4%;*/
 	}
 
-	.jumbotron .social{	/*
-		bottom: 10%;
-		padding-left: 10%;*/
-	}
-
-	.jumbotron .social h5{
-		font-size: 20px;
-	}
-
 	.jumbotron .fa{
+		font-size: 30px;
+		margin-left: 5px;
+		margin-right: 5px;
+	}
+
+	.jumbotron .arrow-down{
+		display: none;
+	}
+
+	.fadeInLeft, .fadeInRight, .fadeInDown, .fadeInUp {
+		-webkit-animation-name: none;
+		-moz-animation-name: none;
+		-o-animation-name: none;
+		animation-name: none;
+	}
+
+	.jumbotron .social{
+		text-align: left;
+		padding-left: 5%;
+		color: white;
+	}
+
+	.jumbotron .social .fa{
+		/*color: white;*/
 		font-size: 30px;
 		margin-left: 5px;
 		margin-right: 5px;
@@ -1284,7 +1309,7 @@ footer a, footer a:hover{
 	}
 
 	.jumbotron .backgroud-picture{
-		/*background-image: url('http://text4reform.org/img/capitol-bw.jpg');*/
+		background-image: url('http://text4reform.org/img/capitol-sm.jpg');
 		/*background-position: -50px 0px;*/
 		background-position: -400px 62px;
 		/*background-position: -37.500em 0em;*/
@@ -1324,6 +1349,7 @@ footer a, footer a:hover{
 		/*text-transform: uppercase;*/
 		/*color: black;*/
 		/*display: none;*/
+		font-family: 'Open Sans', sans-serif;
 	}
 
 	.jumbotron .description h2{
@@ -1412,9 +1438,33 @@ footer a, footer a:hover{
 		margin-right: 5px;
 	}
 
+	.jumbotron .arrow-down{
+		display: none;
+	}
+
 	.learn-more .play-btn {
 		top: 35%;
 		left: 45%;
+	}
+
+	.fadeInLeft, .fadeInRight, .fadeInDown, .fadeInUp {
+		-webkit-animation-name: none;
+		-moz-animation-name: none;
+		-o-animation-name: none;
+		animation-name: none;
+	}
+
+	.jumbotron .social{
+		text-align: left;
+		padding-left: 5%;
+		color: white;
+	}
+
+	.jumbotron .social .fa{
+		/*color: white;*/
+		font-size: 20px;
+		margin-left: 5px;
+		margin-right: 5px;
 	}
 }
 
