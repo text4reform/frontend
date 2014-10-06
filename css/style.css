@@ -347,18 +347,18 @@ a, a:hover{
 	-ms-animation-fill-mode: both;
 	-o-animation-fill-mode: both;
 	animation-fill-mode: both;
-	-webkit-animation-duration: 1s;
-	-moz-animation-duration: 1s;
-	-ms-animation-duration: 1s;
-	-o-animation-duration: 1s;
-	animation-duration: 1s;
+	-webkit-animation-duration: .8s;
+	-moz-animation-duration: .8s;
+	-ms-animation-duration: .8s;
+	-o-animation-duration: .8s;
+	animation-duration: .8s;
 }
 
 .delay07 {
-	-moz-animation-delay: 1s;
-	-o-animation-delay: 1s;
-	animation-delay: 1s;
-	-webkit-animation-delay: 1s;
+	-moz-animation-delay: .5s;
+	-o-animation-delay: .5s;
+	animation-delay: .5s;
+	-webkit-animation-delay: .5s;
 }
 
 
@@ -949,6 +949,17 @@ footer a, footer a:hover{
 
 	.jumbotron .signup{
 		margin-top: 30px;
+	}
+
+	.jumbotron .arrow-down{
+		display: none;
+	}
+
+	.fadeInLeft, .fadeInRight, .fadeInDown, .fadeInUp {
+		-webkit-animation-name: none;
+		-moz-animation-name: none;
+		-o-animation-name: none;
+		animation-name: none;
 	}
 }
 
@@ -1548,6 +1559,7 @@ footer a, footer a:hover{
 	}
 }
 
+
 /* Invite */
 @media (min-width: 454px) and (max-width: 565px){
 	.invite{
@@ -1766,3 +1778,22 @@ footer a, footer a:hover{
 
 
 
+@media (max-height: 500px){
+	.jumbotron .backgroud-picture{
+		/*background-image: url('http://text4reform.org/img/capitol-sm.jpg');*/
+		/*background-position: 0px 0px;*/
+		height: 650px;
+	}	
+
+	.jumbotron .social {
+		position: absolute;
+		height: auto;
+		bottom: none;
+		top: 560px;
+
+		/*margin: 650px;*/
+		/*bottom: 3%;*/
+		padding-right: 5%;
+		/*vertical-align: bottom;*/
+	}
+}
