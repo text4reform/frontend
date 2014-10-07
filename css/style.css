@@ -1318,7 +1318,8 @@ footer a, footer a:hover{
 	.jumbotron .backgroud-picture{
 		/*background-image: url('http://text4reform.org/img/capitol-sm.jpg');*/
 		/*background-position: -50px 0px;*/
-		background-position: -400px 62px;
+		background-position: -400px 50px;
+		/*background-position: -545px 67px;*/
 		/*background-position: -37.500em 0em;*/
 		/*background-size: cover;*/
 		/*background-size: auto 100%;*/
@@ -1450,8 +1451,10 @@ footer a, footer a:hover{
 	}
 
 	.learn-more .play-btn {
-		top: 35%;
-		left: 45%;
+		top: 30%;
+		left: 43%;
+		height: 30px;
+		width: 30px;
 	}
 
 	.fadeInLeft, .fadeInRight, .fadeInDown, .fadeInUp {
@@ -1774,14 +1777,8 @@ footer a, footer a:hover{
 }
 
 
-
-
-
-
-@media (max-height: 500px){
+@media (max-height: 500px) and (min-width: 320px) and (max-width: 500px){
 	.jumbotron .backgroud-picture{
-		/*background-image: url('http://text4reform.org/img/capitol-sm.jpg');*/
-		/*background-position: 0px 0px;*/
 		height: 650px;
 	}	
 
@@ -1795,5 +1792,19 @@ footer a, footer a:hover{
 		/*bottom: 3%;*/
 		padding-right: 5%;
 		/*vertical-align: bottom;*/
+	}
+}
+
+@media (max-height: 500px) and (min-width: 200px) and (max-width: 320px){
+	.jumbotron .backgroud-picture{
+		height: 500px;
+	}	
+
+	.jumbotron .social {
+		position: absolute;
+		height: auto;
+		bottom: none;
+		top: 420px;
+		padding-right: 5%;
 	}
 }
